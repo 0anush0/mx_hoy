@@ -1,0 +1,66 @@
+@import url('https://unpkg.com/98.css');
+
+body {
+    background-color: #008080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'MS Sans Serif', sans-serif;
+}
+
+.window {
+    width: 640px;
+    background-color: #c0c0c0;
+}
+
+.tab-content {
+    display: none;
+    padding: 10px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+menu[role="tablist"] {
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+}
+
+menu[role="tablist"] li {
+    list-style: none;
+    margin-right: 5px;
+}
+
+menu[role="tablist"] a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: #c0c0c0;
+    padding: 5px 10px;
+    border: 2px outset #fff;
+}
+
+menu[role="tablist"] a:focus {
+    outline: 1px dotted #000;
+}
+
+.event {
+    background-color: #ffffff;
+    border: 2px inset #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.event h2 {
+    margin-top: 0;
+    font-size: 1em;
+}
+
+.event-info {
+    font-size: 0.9em;
+    color: #666;
+}
