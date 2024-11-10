@@ -1,4 +1,5 @@
 @import url('https://unpkg.com/98.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
 body {
     background-color: #006847; /* Mexican flag green */
@@ -7,7 +8,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: 'MS Sans Serif', sans-serif;
+    font-family: 'Open Sans', 'MS Sans Serif', sans-serif;
 }
 
 .window {
@@ -19,6 +20,13 @@ body {
 .title-bar {
     background-color: #9E2A2B; /* Dark red title bar */
     color: #ffffff;
+    font-size: 14px;
+    padding: 3px 2px 3px 3px;
+}
+
+.window-body {
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 .tab-content {
@@ -29,6 +37,14 @@ body {
 
 .tab-content.active {
     display: block;
+}
+
+.tab-content h1 {
+    font-size: 18px;
+    color: #9E2A2B;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 menu[role="tablist"] {
@@ -50,6 +66,7 @@ menu[role="tablist"] a {
     background-color: #006847; /* Mexican flag green */
     padding: 5px 10px;
     border: 2px outset #ffffff;
+    font-size: 14px;
 }
 
 menu[role="tablist"] a:focus {
@@ -64,19 +81,23 @@ menu[role="tablist"] a.active {
 .event {
     background-color: #f0f0f0; /* Light gray for contrast */
     border: 2px solid #006847; /* Green border */
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 4px;
 }
 
 .event h2 {
     margin-top: 0;
-    font-size: 1em;
+    margin-bottom: 8px;
+    font-size: 16px;
     color: #9E2A2B; /* Dark red for headers */
+    font-weight: 600;
 }
 
 .event-info {
-    font-size: 0.9em;
+    font-size: 14px;
     color: #006847; /* Green for info text */
+    margin-bottom: 8px;
 }
 
 /* Scrollbar styling */
