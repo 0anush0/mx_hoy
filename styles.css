@@ -13,8 +13,11 @@ body {
 
 .window {
     width: 640px;
+    height: 480px;
     background-color: #ffffff; /* White background */
     border: 2px solid #9E2A2B; /* Dark red border */
+    display: flex;
+    flex-direction: column;
 }
 
 .title-bar {
@@ -27,16 +30,24 @@ body {
 .window-body {
     font-size: 14px;
     line-height: 1.5;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .tab-content {
     display: none;
     padding: 10px;
     background-color: #ffffff; /* White content area */
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .tab-content.active {
-    display: block;
+    display: flex;
 }
 
 .tab-content h1 {
@@ -45,6 +56,11 @@ body {
     margin-top: 0;
     margin-bottom: 15px;
     font-weight: 600;
+}
+
+.scrollable-content {
+    overflow-y: auto;
+    flex-grow: 1;
 }
 
 menu[role="tablist"] {
@@ -102,17 +118,28 @@ menu[role="tablist"] a.active {
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 16px;
 }
 
 ::-webkit-scrollbar-track {
     background: #ffffff;
+    border-left: 1px solid #808080;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #006847;
+    background: #c0c0c0;
+    border: 1px outset #ffffff;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #9E2A2B;
+    background: #a0a0a0;
+}
+
+::-webkit-scrollbar-button {
+    background: #c0c0c0;
+    border: 1px outset #ffffff;
+}
+
+::-webkit-scrollbar-button:hover {
+    background: #a0a0a0;
 }
