@@ -1,7 +1,7 @@
 @import url('https://unpkg.com/98.css');
 
 body {
-    background-color: #008080;
+    background-color: #006847; /* Mexican flag green */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,12 +12,19 @@ body {
 
 .window {
     width: 640px;
-    background-color: #c0c0c0;
+    background-color: #ffffff; /* White background */
+    border: 2px solid #9E2A2B; /* Dark red border */
+}
+
+.title-bar {
+    background-color: #9E2A2B; /* Dark red title bar */
+    color: #ffffff;
 }
 
 .tab-content {
     display: none;
     padding: 10px;
+    background-color: #ffffff; /* White content area */
 }
 
 .tab-content.active {
@@ -28,6 +35,7 @@ menu[role="tablist"] {
     padding-left: 0;
     margin: 0;
     display: flex;
+    background-color: #006847; /* Mexican flag green */
 }
 
 menu[role="tablist"] li {
@@ -38,19 +46,24 @@ menu[role="tablist"] li {
 menu[role="tablist"] a {
     display: inline-block;
     text-decoration: none;
-    color: black;
-    background-color: #c0c0c0;
+    color: #ffffff;
+    background-color: #006847; /* Mexican flag green */
     padding: 5px 10px;
-    border: 2px outset #fff;
+    border: 2px outset #ffffff;
 }
 
 menu[role="tablist"] a:focus {
-    outline: 1px dotted #000;
+    outline: 1px dotted #ffffff;
+}
+
+menu[role="tablist"] a.active {
+    background-color: #ffffff;
+    color: #006847;
 }
 
 .event {
-    background-color: #ffffff;
-    border: 2px inset #fff;
+    background-color: #f0f0f0; /* Light gray for contrast */
+    border: 2px solid #006847; /* Green border */
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -58,9 +71,27 @@ menu[role="tablist"] a:focus {
 .event h2 {
     margin-top: 0;
     font-size: 1em;
+    color: #9E2A2B; /* Dark red for headers */
 }
 
 .event-info {
     font-size: 0.9em;
-    color: #666;
+    color: #006847; /* Green for info text */
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #006847;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9E2A2B;
 }
