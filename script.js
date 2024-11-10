@@ -1,44 +1,26 @@
-const events = [
-    {
-        name: "Christmas parade in CDMX",
-        date: "2024-11-23",
-        time: "16:00",
-        description: "Annual Christmas parade through the streets of Mexico City"
-    },
-    {
-        name: "Corona Capital 2024",
-        date: "2024-11-15",
-        time: "14:30",
-        description: "Music festival featuring various international artists"
-    },
-    {
-        name: "Día de Muertos Exhibition",
-        date: "2024-11-01",
-        time: "10:00",
-        description: "Traditional Day of the Dead exhibition at Zócalo"
-    },
-    {
-        name: "Vive Latino",
-        date: "2024-11-10",
-        time: "12:00",
-        description: "Latin American rock and alternative music festival"
-    },
-    {
-        name: "CDMX Theater Festival",
-        date: "2024-11-05",
-        time: "19:00",
-        description: "Annual theater festival showcasing local and international performances"
+let events = [];
+
+async function loadEvents() {
+    try {
+        const response = await fetch('events.json');
+        const data = await response.json();
+        events = data.concerts;
+        populateEvents();
+    } catch (error) {
+        console.error('Error loading events:', error);
     }
-];
+}
 
 function populateEvents() {
     const eventsContainer = document.getElementById('events-container');
+    eventsContainer.innerHTML = ''; // Clear existing events
     events.forEach(event => {
         const eventElement = document.createElement('div');
         eventElement.className = 'event';
         eventElement.innerHTML = `
             <h2>${event.name}</h2>
             <p class="event-info">${event.date} at ${event.time}</p>
+            <p class="event-venue">${event.venue}</p>
             <p>${event.description}</p>
         `;
         eventsContainer.appendChild(eventElement);
@@ -66,6 +48,6 @@ function setupTabs() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    populateEvents();
+    loadEvents();
     setupTabs();
 });
