@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Cineteca Nacional",
+    "type": "Movie Theater",
+    "neighborhood": "Coyoacán",
+    "address": "Av. México Coyoacán 389, Xoco, 03330",
+    "link": "https://www.cinetecanacional.net/"
+  },
+  {
+    "name": "Foro Sol",
+    "type": "Concert Venue",
+    "neighborhood": "Iztacalco",
+    "address": "Av. Viaducto Río de la Piedad, Granjas México, 08400",
+    "link": "https://www.ocesa.com.mx/venues/foro-sol/"
+  },
+  {
+    "name": "Museo Nacional de Antropología",
+    "type": "Museum",
+    "neighborhood": "Miguel Hidalgo",
+    "address": "Av. Paseo de la Reforma & Calzada Gandhi, Chapultepec Polanco, 11560",
+    "link": "https://www.mna.inah.gob.mx/"
+  },
+  {
+    "name": "Estadio Azteca",
+    "type": "Sports Arena",
+    "neighborhood": "Coyoacán",
+    "address": "Calzada de Tlalpan 3465, Santa Úrsula Coapa, 04650",
+    "link": "https://www.estadioazteca.com.mx/",
+    "teams": ["Club América", "Cruz Azul"]
+  },
+  {
+    "name": "Teatro de los Insurgentes",
+    "type": "Theater",
+    "neighborhood": "Benito Juárez",
+    "address": "Av. Insurgentes Sur 1587, San José Insurgentes, 03900",
+    "link": "https://teatroinsurgentes.com/"
+  },
+  {
+    "name": "Centro Cultural de España en México",
+    "type": "Cultural Center",
+    "neighborhood": "Cuauhtémoc",
+    "address": "República de Guatemala 18, Centro Histórico, 06010",
+    "link": "https://ccemx.org/"
+  }
+]

@@ -58,43 +58,37 @@ function displayEvents(events) {
     });
 }
 
-const places = {
-    "Movie Theaters": [
-        { name: "Cineteca Nacional", type: "Movie Theater", neighborhood: "Coyoacán", address: "Av. México Coyoacán 389, Xoco, 03330", link: "https://www.cinetecanacional.net/" },
-        { name: "Cine Tonalá", type: "Movie Theater", neighborhood: "Roma Sur", address: "Tonalá 261, Roma Sur, 06760", link: "https://www.cinetonala.mx/" },
-        // ... (other movie theaters)
-    ],
-    "Concert Venues": [
-        { name: "Foro Sol", type: "Concert Venue", neighborhood: "Iztacalco", address: "Av. Viaducto Río de la Piedad, Granjas México, 08400", link: "https://www.ocesa.com.mx/venues/foro-sol/" },
-        { name: "Palacio de los Deportes", type: "Concert Venue", neighborhood: "Iztacalco", address: "Av. Río Churubusco y Añil s/n, Granjas México, 08400", link: "https://www.palaciodelosdeportes.com.mx/" },
-        // ... (other concert venues)
-    ],
-    // ... (other categories)
-};
-
-function loadPlaces() {
-    const placesContainer = document.getElementById('places-list');
-    placesContainer.innerHTML = '';
-    for (const [category, venues] of Object.entries(places)) {
-        venues.forEach(venue => {
-            const venueElement = document.createElement('div');
-            venueElement.classList.add('place');
-            venueElement.innerHTML = `
-                <h3>${venue.name}</h3>
-                <p>Tipo: ${venue.type}</p>
-                <p>Colonia: ${venue.neighborhood}</p>
-                <p>Dirección: ${venue.address}</p>
-                <a href="${venue.link}" target="_blank">Sitio Web</a>
-                ${venue.teams ? `<p>Equipos: ${venue.teams.join(', ')}</p>` : ''}
-            `;
-            placesContainer.appendChild(venueElement);
-        });
+async function loadPlaces() {
+    try {
+        const response = await fetch('places.json');
+        const places = await response.json();
+        displayPlaces(places);
+    } catch (error) {
+        console.error('Error loading places:', error);
     }
+}
+
+function displayPlaces(places) {
+    const placesList = document.getElementById('places-list');
+    placesList.innerHTML = '';
+    places.forEach(place => {
+        const placeElement = document.createElement('div');
+        placeElement.classList.add('place');
+        placeElement.innerHTML = `
+            <h3>${place.name}</h3>
+            <p>Tipo: ${place.type}</p>
+            <p>Colonia: ${place.neighborhood}</p>
+            <p>Dirección: ${place.address}</p>
+            <a href="${place.link}" target="_blank">Sitio Web</a>
+            ${place.teams ? `<p>Equipos: ${place.teams.join(', ')}</p>` : ''}
+        `;
+        placesList.appendChild(placeElement);
+    });
 }
 
 function loadCategories() {
     const eventCategories = ['Conciertos', 'Cine', 'Teatro', 'Deportes', 'Exposiciones', 'Charlas', 'Clases', 'Tours'];
-    const placeCategories = ['Movie Theaters', 'Concert Venues', 'Museums', 'Sports Arenas', 'Theaters', 'Cultural Centers'];
+    const placeCategories = ['Movie Theater', 'Concert Venue', 'Museum', 'Sports Arena', 'Theater', 'Cultural Center'];
 
     populateCategories('event-category', eventCategories);
     populateCategories('places-category', placeCategories);
