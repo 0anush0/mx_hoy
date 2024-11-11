@@ -1,32 +1,32 @@
 [
   {
-    "name": "Concierto de Rock en el Foro Sol",
+    "name": "Noche de Reggaetón en Foro Sol",
     "date": "2024-11-15",
     "location": "Foro Sol",
-    "description": "Gran concierto de rock con bandas nacionales e internacionales."
+    "description": "Los mejores artistas de reggaetón en una noche inolvidable."
   },
   {
-    "name": "Exposición de Arte Moderno",
+    "name": "EDM Fest CDMX",
     "date": "2024-11-20",
-    "location": "Museo Tamayo",
-    "description": "Exhibición de obras de artistas contemporáneos mexicanos."
+    "location": "Autódromo Hermanos Rodríguez",
+    "description": "Festival de música electrónica con DJs internacionales."
   },
   {
-    "name": "Partido de Fútbol: América vs. Pumas",
+    "name": "Hip Hop al Parque",
     "date": "2024-11-25",
-    "location": "Estadio Azteca",
-    "description": "Clásico capitalino de la Liga MX."
+    "location": "Parque Bicentenario",
+    "description": "Batalla de rap y exhibición de breakdance en el parque."
   },
   {
-    "name": "Festival de Jazz en el Parque México",
+    "name": "Skate & Music Fest",
     "date": "2024-12-01",
-    "location": "Parque México",
-    "description": "Disfruta de los mejores músicos de jazz en un ambiente al aire libre."
+    "location": "Parque Naucalli",
+    "description": "Competencia de skateboarding y conciertos de rock alternativo."
   },
   {
-    "name": "Noche de Museos",
+    "name": "Urban Art Night",
     "date": "2024-12-10",
-    "location": "Varios museos de la ciudad",
-    "description": "Visita nocturna a los principales museos de la Ciudad de México."
+    "location": "Museo Universitario del Chopo",
+    "description": "Exposición de arte urbano, graffiti en vivo y música experimental."
   }
 ]

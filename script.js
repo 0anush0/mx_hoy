@@ -1,16 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Load events
     loadEvents();
+    loadPlaces();
 
-    // Tab functionality
-    const tabButtons = document.querySelectorAll('.tab-button');
+    const navButtons = document.querySelectorAll('.nav-button');
     const tabContents = document.querySelectorAll('.tab-content');
 
-    tabButtons.forEach(button => {
+    navButtons.forEach(button => {
         button.addEventListener('click', () => {
             const tabName = button.getAttribute('data-tab');
 
-            tabButtons.forEach(btn => btn.classList.remove('active'));
+            navButtons.forEach(btn => btn.classList.remove('active'));
             tabContents.forEach(content => content.classList.remove('active'));
 
             button.classList.add('active');
@@ -18,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Email form submission
     document.getElementById('email-form').addEventListener('submit', function(e) {
         e.preventDefault();
         const email = document.getElementById('email').value;
@@ -51,8 +49,25 @@ function displayEvents(events) {
     });
 }
 
+function loadPlaces() {
+    const places = {
+        'concert-venues': ['Foro Sol', 'Palacio de los Deportes', 'Auditorio Nacional', 'Teatro Metropólitan', 'Palacio de Bellas Artes', 'Plaza Condesa', 'Pepsi Center WTC', 'Sala Nezahualcóyotl'],
+        'museums': ['Museo Nacional de Antropología', 'Museo Soumaya', 'Museo Frida Kahlo', 'Museo Nacional de Historia', 'Museo de Arte Moderno', 'Museo Jumex', 'Museo Tamayo', 'MUAC'],
+        'parks': ['Bosque de Chapultepec', 'Parque México', 'Alameda Central', 'Parque Ecológico de Xochimilco', 'Parque Hundido', 'Bosque de Tlalpan', 'Parque La Mexicana', 'Viveros de Coyoacán'],
+        'sports-venues': ['Estadio Azteca', 'Estadio Olímpico Universitario', 'Arena Ciudad de México', 'Autódromo Hermanos Rodríguez', 'Hipódromo de las Américas', 'Arena México']
+    };
+
+    for (const [category, placeList] of Object.entries(places)) {
+        const ul = document.getElementById(category);
+        placeList.forEach(place => {
+            const li = document.createElement('li');
+            li.textContent = place;
+            ul.appendChild(li);
+        });
+    }
+}
+
 async function submitEmail(email) {
-    // This is a placeholder function. In a real application, you would send this data to your server.
     console.log(`Email submitted: ${email}`);
-    alert('¡Gracias por participar! Revisa tu correo para más información.');
+    alert('¡Gracias por unirte! Revisa tu correo para info exclusiva y sorpresas VIP.');
 }
