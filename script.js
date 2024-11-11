@@ -2,9 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load events
     loadEvents();
 
-    // Load weather
-    loadWeather();
-
     // Handle tab clicks
     const tabs = document.querySelectorAll('nav ul li a');
     tabs.forEach(tab => {
@@ -56,25 +53,6 @@ function displayEvents(events) {
         `;
         eventList.appendChild(eventElement);
     });
-}
-
-async function loadWeather() {
-    // Fetch weather data from a weather API
-    try {
-        const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Mexico+City&appid=YOUR_API_KEY&units=metric');
-        const weatherData = await response.json();
-        displayWeather(weatherData);
-    } catch (error) {
-        console.error('Error loading weather:', error);
-    }
-}
-
-function displayWeather(weatherData) {
-    const weatherInfo = document.getElementById('weather-info');
-    weatherInfo.innerHTML = `
-        <p>Temperatura: ${weatherData.main.temp}°C</p>
-        <p>Condición: ${weatherData.weather[0].description}</p>
-    `;
 }
 
 async function submitEmail(email) {
