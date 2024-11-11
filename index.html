@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- ... (keep the existing head content) ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDMX Hoy - Eventos y Lugares</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -38,7 +42,16 @@
         </div>
     </main>
 
-    <!-- ... (keep the existing email signup and weather widget sections) ... -->
+    <section id="email-signup">
+        <h2>¡Gana boletos gratis!</h2>
+        <p>Regístrate para participar en nuestros sorteos de boletos</p>
+        <form id="email-form">
+            <input type="email" id="email" placeholder="Tu correo electrónico" required>
+            <button type="submit">Registrarse</button>
+        </form>
+    </section>
+
+    <div id="weather-widget"></div>
 
     <script src="script.js"></script>
 </body>

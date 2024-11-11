@@ -193,27 +193,16 @@ h3 {
     color: #ffffff;
 }
 
+/* Tab content styles */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .event-grid, .places-grid {
         grid-template-columns: 1fr;
-    }
-
-    #event-filters, #places-filters {
-        flex-direction: column;
-    }
-
-    #event-search, #event-category, #places-search, #places-category {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    #email-form {
-        flex-direction: column;
-    }
-
-    #email, #email-form button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
