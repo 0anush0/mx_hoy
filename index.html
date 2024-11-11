@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,32 +18,28 @@
         </div>
         <div class="window-body">
             <menu role="tablist">
-                <li role="tab"><a href="#upcoming">Upcoming</a></li>
-                <li role="tab"><a href="#venues">Venues</a></li>
-                <li role="tab"><a href="#about">About</a></li>
+                <li role="tab"><a href="#upcoming">Próximos</a></li>
+                <li role="tab"><a href="#venues">Lugares</a></li>
+                <li role="tab"><a href="#search">Buscar</a></li>
+                <li role="tab"><a href="#about">Acerca de</a></li>
             </menu>
             <div class="tab-content" id="upcoming">
-                <h1>Upcoming Events</h1>
+                <h1>Próximos Eventos</h1>
                 <div id="events-container" class="scrollable-content"></div>
             </div>
             <div class="tab-content" id="venues">
-                <h1>Popular Venues</h1>
-                <ul>
-                    <li>Auditorio Nacional</li>
-                    <li>Foro Sol</li>
-                    <li>Palacio de los Deportes</li>
-                    <li>Arena Ciudad De Mexico (Arena CDMX)</li>
-                    <li>Teatro Metropolitan</li>
-                    <li>La Maraka</li>
-                    <li>El Lunario</li>
-                    <li>Autódromo Hermanos Rodríguez</li>
-                    <li>Estadio GNP Seguros</li>
-                    <li>Pepsi Center WTC</li>
-                </ul>
+                <h1>Lugares Populares</h1>
+                <ul id="venues-list"></ul>
+            </div>
+            <div class="tab-content" id="search">
+                <h1>Buscar Eventos</h1>
+                <input type="text" id="search-input" placeholder="Buscar por nombre o lugar">
+                <button id="search-button">Buscar</button>
+                <div id="search-results" class="scrollable-content"></div>
             </div>
             <div class="tab-content" id="about">
-                <h1>About CDMX Events</h1>
-                <p>Your retro guide to the hottest events in Mexico City!</p>
+                <h1>Acerca de CDMX Events</h1>
+                <p>¡Tu guía retro para los eventos más candentes en la Ciudad de México!</p>
             </div>
         </div>
     </div>
