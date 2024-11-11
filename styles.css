@@ -6,8 +6,8 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Courier Prime', monospace;
+    background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
 }
@@ -22,16 +22,15 @@ body {
 header {
     text-align: center;
     padding: 40px 0;
-    background-color: #ff4757;
+    background-color: #ff6b6b;
     margin-bottom: 30px;
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3.5em;
+    font-family: 'Futura', sans-serif;
+    font-size: 3em;
     color: #ffffff;
     letter-spacing: 2px;
-    text-transform: uppercase;
 }
 
 .tagline {
@@ -45,7 +44,7 @@ nav {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-    background-color: #2f3542;
+    background-color: #4ecdc4;
     padding: 10px 0;
 }
 
@@ -58,13 +57,13 @@ nav {
     font-size: 1em;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Futura', sans-serif;
     text-transform: uppercase;
 }
 
 .nav-button:hover, .nav-button.active {
-    background-color: #ff4757;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #4ecdc4;
 }
 
 /* Main content styles */
@@ -76,9 +75,9 @@ main {
 }
 
 h2 {
-    color: #ff4757;
+    color: #ff6b6b;
     margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Futura', sans-serif;
     text-transform: uppercase;
 }
 
@@ -91,7 +90,7 @@ h2 {
 #event-search, #event-category, #places-search, #places-category {
     padding: 10px;
     font-size: 1em;
-    border: 2px solid #2f3542;
+    border: 2px solid #4ecdc4;
     background-color: #ffffff;
     color: #333;
 }
@@ -112,14 +111,14 @@ h2 {
 
 .event, .place {
     background-color: #ffffff;
-    border: 2px solid #ff4757;
+    border: 2px solid #ff6b6b;
     padding: 20px;
     transition: transform 0.3s ease;
 }
 
 .event:hover, .place:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(255,71,87,0.3);
+    box-shadow: 0 5px 15px rgba(255,107,107,0.3);
 }
 
 .event-tags {
@@ -128,7 +127,7 @@ h2 {
 
 .event-tag {
     display: inline-block;
-    background-color: #2f3542;
+    background-color: #4ecdc4;
     color: #ffffff;
     padding: 2px 5px;
     margin-right: 5px;
@@ -137,14 +136,19 @@ h2 {
 }
 
 h3 {
-    color: #ff4757;
+    color: #ff6b6b;
     margin-bottom: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Futura', sans-serif;
+}
+
+.place h3 i {
+    margin-right: 10px;
+    color: #4ecdc4;
 }
 
 /* Email signup styles */
 #email-signup {
-    background-color: #ff4757;
+    background-color: #ff6b6b;
     padding: 30px;
     text-align: center;
     margin-bottom: 30px;
@@ -170,24 +174,24 @@ h3 {
 }
 
 #email-form button {
-    background-color: #2f3542;
+    background-color: #4ecdc4;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Futura', sans-serif;
     text-transform: uppercase;
 }
 
 #email-form button:hover {
-    background-color: #1e2532;
+    background-color: #45b7ac;
 }
 
 /* Weather widget styles */
 #weather-widget {
-    background-color: #2f3542;
+    background-color: #4ecdc4;
     padding: 20px;
     text-align: center;
     color: #ffffff;
@@ -206,3 +210,16 @@ h3 {
 @media (max-width: 768px) {
     .event-grid, .places-grid {
         grid-template-columns: 1fr;
+    }
+
+    #event-filters, #places-filters {
+        flex-direction: column;
+    }
+
+    #event-search, #event-category, #places-search, #places-category {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #email-form {
+        flex-direction: column;
