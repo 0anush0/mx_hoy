@@ -1,107 +1,17 @@
 [
   {
-    "name": "Concierto de Rock en el Foro Sol",
-    "date": "2024-11-15",
-    "location": "Foro Sol",
-    "description": "Gran concierto de rock con bandas nacionales e internacionales.",
-    "tags": ["conciertos", "rock", "música"]
+    "name": "Cineteca Nacional",
+    "type": "Movie Theater",
+    "neighborhood": "Coyoacán",
+    "address": "Av. México Coyoacán 389, Xoco, 03330",
+    "link": "https://www.cinetecanacional.net/"
   },
   {
-    "name": "Festival de Cine Independiente",
-    "date": "2024-11-20",
-    "location": "Cineteca Nacional",
-    "description": "Muestra de películas independientes de directores emergentes.",
-    "tags": ["cine", "festival", "cultura"]
+    "name": "Foro Sol",
+    "type": "Concert Venue",
+    "neighborhood": "Iztacalco",
+    "address": "Av. Viaducto Río de la Piedad, Granjas México, 08400",
+    "link": "https://www.ocesa.com.mx/venues/foro-sol/"
   },
-  {
-    "name": "Obra de Teatro: 'La Casa de Bernarda Alba'",
-    "date": "2024-11-25",
-    "location": "Teatro de la Ciudad",
-    "description": "Representación de la famosa obra de Federico García Lorca.",
-    "tags": ["teatro", "cultura", "literatura"]
-  },
-  {
-    "name": "Partido de Fútbol: América vs. Pumas",
-    "date": "2024-12-01",
-    "location": "Estadio Azteca",
-    "description": "Clásico capitalino de la Liga MX.",
-    "tags": ["deportes", "fútbol"]
-  },
-  {
-    "name": "Exposición de Arte Contemporáneo",
-    "date": "2024-12-10",
-    "location": "MUAC",
-    "description": "Muestra de artistas contemporáneos mexicanos e internacionales.",
-    "tags": ["exposiciones", "arte", "cultura"]
-  },
-  {
-    "name": "Charla: 'El Futuro de la Inteligencia Artificial'",
-    "date": "2024-12-15",
-    "location": "Teatro Metropólitan",
-    "description": "Conferencia sobre los avances y desafíos de la IA.",
-    "tags": ["charlas", "tecnología", "ciencia"]
-  },
-  {
-    "name": "Clase Magistral de Cocina Mexicana",
-    "date": "2024-12-20",
-    "location": "Escuela de Gastronomía",
-    "description": "Aprende los secretos de la cocina tradicional mexicana.",
-    "tags": ["clases", "gastronomía", "cultura"]
-  },
-  {
-    "name": "Tour Nocturno por el Centro Histórico",
-    "date": "2024-12-25",
-    "location": "Zócalo",
-    "description": "Recorrido guiado por los lugares más emblemáticos del Centro Histórico.",
-    "tags": ["tours", "historia", "cultura"]
-  },
-  {
-    "name": "Concierto de Jazz en el Lunario",
-    "date": "2025-01-05",
-    "location": "Lunario del Auditorio Nacional",
-    "description": "Noche de jazz con artistas locales e internacionales.",
-    "tags": ["conciertos", "jazz", "música"]
-  },
-  {
-    "name": "Estreno de Película Blockbuster",
-    "date": "2025-01-10",
-    "location": "Cinépolis Perisur",
-    "description": "Estreno de la película más esperada del año.",
-    "tags": ["cine", "entretenimiento"]
-  },
-  {
-    "name": "Partido de Béisbol: Diablos Rojos vs. Sultanes",
-    "date": "2025-01-15",
-    "location": "Estadio Alfredo Harp Helú",
-    "description": "Emocionante juego de la Liga Mexicana de Béisbol.",
-    "tags": ["deportes", "béisbol"]
-  },
-  {
-    "name": "Festival de Música Electrónica",
-    "date": "2025-01-20",
-    "location": "Autódromo Hermanos Rodríguez",
-    "description": "Gran festival con los mejores DJs internacionales.",
-    "tags": ["conciertos", "música electrónica", "festival"]
-  },
-  {
-    "name": "Picnic en el Bosque de Chapultepec",
-    "date": "2025-01-25",
-    "location": "Bosque de Chapultepec",
-    "description": "Día de campo en el pulmón verde de la ciudad.",
-    "tags": ["parques", "naturaleza", "recreación"]
-  },
-  {
-    "name": "Noche de Stand-Up Comedy",
-    "date": "2025-02-01",
-    "location": "El Vicio",
-    "description": "Show de comedia con los mejores comediantes de la ciudad.",
-    "tags": ["comedia", "entretenimiento"]
-  },
-  {
-    "name": "Fiesta Electrónica en Departamento",
-    "date": "2025-02-05",
-    "location": "Departamento",
-    "description": "Noche de música electrónica en uno de los mejores clubs de la ciudad.",
-    "tags": ["clubes", "música electrónica", "fiesta"]
-  }
+  // ... (other places)
 ]
