@@ -1,32 +1,32 @@
 [
   {
-    "name": "Noche de Reggaetón en Foro Sol",
+    "name": "Skate & Destroy: Competencia Nocturna",
     "date": "2024-11-15",
-    "location": "Foro Sol",
-    "description": "Los mejores artistas de reggaetón en una noche inolvidable."
+    "location": "Skatepark Templo Mayor",
+    "description": "Competencia de skate con DJs en vivo y proyecciones de video arte."
   },
   {
-    "name": "EDM Fest CDMX",
+    "name": "Underground Film Fest",
     "date": "2024-11-20",
-    "location": "Autódromo Hermanos Rodríguez",
-    "description": "Festival de música electrónica con DJs internacionales."
+    "location": "Cineteca Nacional",
+    "description": "Maratón de cine independiente y experimental con directores locales."
   },
   {
-    "name": "Hip Hop al Parque",
+    "name": "Street Art Jam",
     "date": "2024-11-25",
-    "location": "Parque Bicentenario",
-    "description": "Batalla de rap y exhibición de breakdance en el parque."
+    "location": "Foro Alicia",
+    "description": "Festival de arte urbano con live painting, música en vivo y food trucks."
   },
   {
-    "name": "Skate & Music Fest",
+    "name": "Techno Warehouse Party",
     "date": "2024-12-01",
-    "location": "Parque Naucalli",
-    "description": "Competencia de skateboarding y conciertos de rock alternativo."
+    "location": "Ubicación Secreta",
+    "description": "Fiesta clandestina de música electrónica en una bodega abandonada."
   },
   {
-    "name": "Urban Art Night",
+    "name": "Zine Fest CDMX",
     "date": "2024-12-10",
-    "location": "Museo Universitario del Chopo",
-    "description": "Exposición de arte urbano, graffiti en vivo y música experimental."
+    "location": "Border",
+    "description": "Feria de fanzines y publicaciones independientes con talleres y charlas."
   }
 ]

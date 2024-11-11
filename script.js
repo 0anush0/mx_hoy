@@ -51,10 +51,10 @@ function displayEvents(events) {
 
 function loadPlaces() {
     const places = {
-        'concert-venues': ['Foro Sol', 'Palacio de los Deportes', 'Auditorio Nacional', 'Teatro Metropólitan', 'Palacio de Bellas Artes', 'Plaza Condesa', 'Pepsi Center WTC', 'Sala Nezahualcóyotl'],
-        'museums': ['Museo Nacional de Antropología', 'Museo Soumaya', 'Museo Frida Kahlo', 'Museo Nacional de Historia', 'Museo de Arte Moderno', 'Museo Jumex', 'Museo Tamayo', 'MUAC'],
-        'parks': ['Bosque de Chapultepec', 'Parque México', 'Alameda Central', 'Parque Ecológico de Xochimilco', 'Parque Hundido', 'Bosque de Tlalpan', 'Parque La Mexicana', 'Viveros de Coyoacán'],
-        'sports-venues': ['Estadio Azteca', 'Estadio Olímpico Universitario', 'Arena Ciudad de México', 'Autódromo Hermanos Rodríguez', 'Hipódromo de las Américas', 'Arena México']
+        'skate-parks': ['Skatepark Templo Mayor', 'La Mexicana Skatepark', 'Parque Bicentenario Skatepark', 'Skatepark Constituyentes', 'Skatepark Xochimilco'],
+        'underground-galleries': ['Border', 'Galería Libertad', 'Antimuseo', 'Biquini Wax EPS', 'Salón Silicón'],
+        'cult-cinemas': ['Cine Tonalá', 'La Casa del Cine', 'Cineteca Nacional', 'Cinemanía', 'Cine Villa Olímpica'],
+        'night-clubs': ['M.N. Roy', 'Yu Yu', 'Departamento', 'Foro Normandie', 'Patrick Miller']
     };
 
     for (const [category, placeList] of Object.entries(places)) {
@@ -69,5 +69,5 @@ function loadPlaces() {
 
 async function submitEmail(email) {
     console.log(`Email submitted: ${email}`);
-    alert('¡Gracias por unirte! Revisa tu correo para info exclusiva y sorpresas VIP.');
+    alert('¡Bienvenido a la comunidad underground! Revisa tu correo para info exclusiva.');
 }
