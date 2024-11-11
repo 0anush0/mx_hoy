@@ -6,9 +6,9 @@
 }
 
 body {
-    font-family: 'Roboto Mono', monospace;
-    background-color: #000;
-    color: #0f0;
+    font-family: 'Courier New', monospace;
+    background-color: #f5f5f5;
+    color: #333;
     line-height: 1.6;
 }
 
@@ -22,21 +22,21 @@ body {
 header {
     text-align: center;
     padding: 40px 0;
-    border-bottom: 2px solid #0f0;
+    background-color: #ff6b6b;
     margin-bottom: 30px;
 }
 
 h1 {
-    font-family: 'VT323', monospace;
-    font-size: 4em;
-    color: #0f0;
-    text-shadow: 2px 2px #f0f;
+    font-family: 'Futura', sans-serif;
+    font-size: 3em;
+    color: #ffffff;
+    letter-spacing: 2px;
 }
 
 .tagline {
     font-size: 1.2em;
-    color: #0f0;
-    opacity: 0.8;
+    color: #ffffff;
+    font-style: italic;
 }
 
 /* Navigation styles */
@@ -44,37 +44,41 @@ nav {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    background-color: #4ecdc4;
+    padding: 10px 0;
 }
 
 .nav-button {
-    background-color: #000;
-    border: 2px solid #0f0;
-    color: #0f0;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
     padding: 10px 20px;
     margin: 0 10px;
     font-size: 1em;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'VT323', monospace;
+    font-family: 'Futura', sans-serif;
+    text-transform: uppercase;
 }
 
 .nav-button:hover, .nav-button.active {
-    background-color: #0f0;
-    color: #000;
+    background-color: #ffffff;
+    color: #4ecdc4;
 }
 
 /* Main content styles */
 main {
-    background-color: #111;
-    border: 2px solid #0f0;
+    background-color: #ffffff;
     padding: 30px;
     margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 h2 {
-    color: #f0f;
+    color: #ff6b6b;
     margin-bottom: 20px;
-    font-family: 'VT323', monospace;
+    font-family: 'Futura', sans-serif;
+    text-transform: uppercase;
 }
 
 #event-filters {
@@ -86,9 +90,9 @@ h2 {
 #event-search, #event-category {
     padding: 10px;
     font-size: 1em;
-    background-color: #000;
-    color: #0f0;
-    border: 2px solid #0f0;
+    border: 2px solid #4ecdc4;
+    background-color: #ffffff;
+    color: #333;
 }
 
 #event-search {
@@ -106,15 +110,15 @@ h2 {
 }
 
 .event, .place-category {
-    background-color: #222;
-    border: 2px solid #0f0;
+    background-color: #ffffff;
+    border: 2px solid #ff6b6b;
     padding: 20px;
     transition: transform 0.3s ease;
 }
 
 .event:hover, .place-category:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(255,107,107,0.3);
 }
 
 .event-tags {
@@ -123,8 +127,8 @@ h2 {
 
 .event-tag {
     display: inline-block;
-    background-color: #0f0;
-    color: #000;
+    background-color: #4ecdc4;
+    color: #ffffff;
     padding: 2px 5px;
     margin-right: 5px;
     font-size: 0.8em;
@@ -132,9 +136,9 @@ h2 {
 }
 
 h3 {
-    color: #f0f;
+    color: #ff6b6b;
     margin-bottom: 10px;
-    font-family: 'VT323', monospace;
+    font-family: 'Futura', sans-serif;
 }
 
 ul {
@@ -143,20 +147,19 @@ ul {
 
 li {
     margin-bottom: 5px;
-    color: #0f0;
+    color: #333;
 }
 
 /* Email signup styles */
 #email-signup {
-    background-color: #111;
-    border: 2px solid #0f0;
+    background-color: #ff6b6b;
     padding: 30px;
     text-align: center;
     margin-bottom: 30px;
 }
 
 #email-signup h2 {
-    color: #f0f;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
@@ -168,33 +171,34 @@ li {
 #email {
     padding: 10px;
     font-size: 1em;
-    border: 2px solid #0f0;
-    background-color: #000;
-    color: #0f0;
+    border: none;
+    background-color: #ffffff;
+    color: #333;
     width: 60%;
 }
 
 #email-form button {
-    background-color: #0f0;
-    color: #000;
+    background-color: #4ecdc4;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-family: 'VT323', monospace;
+    font-family: 'Futura', sans-serif;
+    text-transform: uppercase;
 }
 
 #email-form button:hover {
-    background-color: #f0f;
+    background-color: #45b7ac;
 }
 
 /* Weather widget styles */
 #weather-widget {
-    background-color: #111;
-    border: 2px solid #0f0;
+    background-color: #4ecdc4;
     padding: 20px;
     text-align: center;
+    color: #ffffff;
 }
 
 /* Responsive adjustments */
