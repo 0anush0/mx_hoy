@@ -1,20 +1,28 @@
+/* Hip-hop/Reggaeton CDMX Themed Styles */
 body {
     background-color: #141414; /* Dark background for urban feel */
     color: #ffffff; /* White text for contrast */
     font-family: 'Open Sans', 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .window {
     width: 90vw;
     max-width: 1200px;
-    height: auto;
+    height: 90vh;
     background-color: #1a1a1a; /* Dark grey for window */
     border-radius: 10px; /* Rounded edges */
     padding: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .title-bar {
@@ -29,6 +37,9 @@ body {
 .window-body {
     font-size: 16px;
     line-height: 1.5;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
 }
 
@@ -38,6 +49,8 @@ body {
     background-color: #252525; /* Dark content area */
     border-radius: 8px;
     margin-top: 10px;
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
 .tab-content.active {
@@ -53,9 +66,8 @@ body {
 }
 
 .scrollable-content {
-    max-height: 400px;
     overflow-y: auto;
-    margin-top: 10px;
+    flex-grow: 1;
 }
 
 menu[role="tablist"] {
@@ -93,12 +105,35 @@ menu[role="tablist"] a.active {
     border-radius: 5px;
     padding: 15px;
     margin-bottom: 15px;
-    border: 3px solid #ff4081; /* Pink border for events */
-    transition: transform 0.3s ease;
+    border: 3px solid transparent; /* Transparent border initially */
+    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .event:hover {
     transform: scale(1.02);
+    border-color: #ff4081; /* Pink border on hover */
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.5); /* Glow effect */
+}
+
+.event:hover::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(45deg, #ff4081, #e91e63, #ff4081, #e91e63);
+    z-index: -1;
+    filter: blur(5px);
+    animation: glowing 1.5s linear infinite;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
 
 .event h2 {
@@ -158,4 +193,22 @@ menu[role="tablist"] a.active {
 /* Add neon glow effect to headings */
 h1, h2 {
     text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff4081;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e91e63;
 }
