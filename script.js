@@ -5,8 +5,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load weather
     loadWeather();
 
-    // Load AI recommendations
-    loadRecommendations();
+    // Handle tab clicks
+    const tabs = document.querySelectorAll('nav ul li a');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const sections = document.querySelectorAll('main > section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(targetId).style.display = 'block';
+            tabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // Show the first section by default
+    document.querySelector('nav ul li a').click();
 
     // Handle email form submission
     document.getElementById('email-form').addEventListener('submit', function(e) {
@@ -17,9 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 async function loadEvents() {
-    // Fetch events from your backend API
+    // Fetch events from local events.json file
     try {
-        const response = await fetch('/api/events');
+        const response = await fetch('events.json');
         const events = await response.json();
         displayEvents(events);
     } catch (error) {
@@ -28,11 +44,8 @@ async function loadEvents() {
 }
 
 function displayEvents(events) {
-    const destacadosSection = document.getElementById('destacados');
-    // Clear existing content
-    destacadosSection.innerHTML = '<h2>Eventos Destacados</h2>';
-
-    // Display events
+    const eventList = document.getElementById('event-list');
+    eventList.innerHTML = '';
     events.forEach(event => {
         const eventElement = document.createElement('div');
         eventElement.classList.add('event');
@@ -41,7 +54,7 @@ function displayEvents(events) {
             <p>${event.date} - ${event.location}</p>
             <p>${event.description}</p>
         `;
-        destacadosSection.appendChild(eventElement);
+        eventList.appendChild(eventElement);
     });
 }
 
@@ -57,35 +70,11 @@ async function loadWeather() {
 }
 
 function displayWeather(weatherData) {
-    const climaSection = document.getElementById('clima');
-    climaSection.innerHTML = `
-        <h2>Clima en CDMX</h2>
+    const weatherInfo = document.getElementById('weather-info');
+    weatherInfo.innerHTML = `
         <p>Temperatura: ${weatherData.main.temp}°C</p>
         <p>Condición: ${weatherData.weather[0].description}</p>
     `;
-}
-
-async function loadRecommendations() {
-    // In the future, this will fetch AI-generated recommendations
-    // For now, we'll use placeholder data
-    const recommendations = [
-        "Concierto de rock en el Foro Sol",
-        "Exposición de arte contemporáneo en el Museo Jumex",
-        "Partido de fútbol en el Estadio Azteca"
-    ];
-    displayRecommendations(recommendations);
-}
-
-function displayRecommendations(recommendations) {
-    const recomendacionesSection = document.getElementById('recomendaciones');
-    recomendacionesSection.innerHTML = '<h2>Recomendaciones AI</h2>';
-    const list = document.createElement('ul');
-    recommendations.forEach(rec => {
-        const item = document.createElement('li');
-        item.textContent = rec;
-        list.appendChild(item);
-    });
-    recomendacionesSection.appendChild(list);
 }
 
 async function submitEmail(email) {
