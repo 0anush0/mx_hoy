@@ -7,48 +7,71 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <div class="container">
         <h1>CDMX Hoy</h1>
-        <nav>
-            <ul>
-                <li><a href="#eventos">Eventos</a></li>
-                <li><a href="#conciertos">Conciertos</a></li>
-                <li><a href="#fiestas">Fiestas</a></li>
-                <li><a href="#deportes">Deportes</a></li>
-                <li><a href="#cultura">Cultura</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="destacados">
+        <div class="tabs">
+            <button class="tab-button active" data-tab="eventos">Eventos</button>
+            <button class="tab-button" data-tab="lugares">Lugares</button>
+        </div>
+        <div id="eventos" class="tab-content active">
             <h2>Eventos Destacados</h2>
-            <!-- Eventos destacados se cargarán dinámicamente aquí -->
-        </section>
-
-        <section id="clima">
-            <h2>Clima en CDMX</h2>
-            <!-- Información del clima se cargará dinámicamente aquí -->
-        </section>
-
-        <section id="recomendaciones">
-            <h2>Recomendaciones AI</h2>
-            <!-- Recomendaciones de AI se cargarán dinámicamente aquí -->
-        </section>
-
-        <section id="sorteo">
+            <div id="event-list"></div>
+        </div>
+        <div id="lugares" class="tab-content">
+            <h2>Lugares</h2>
+            <div id="place-list">
+                <h3>Venues de Conciertos</h3>
+                <ul>
+                    <li>Foro Sol</li>
+                    <li>Palacio de los Deportes</li>
+                    <li>Auditorio Nacional</li>
+                    <li>Teatro Metropólitan</li>
+                    <li>Palacio de Bellas Artes</li>
+                    <li>Plaza Condesa</li>
+                    <li>Pepsi Center WTC</li>
+                    <li>Sala Nezahualcóyotl</li>
+                </ul>
+                <h3>Museos</h3>
+                <ul>
+                    <li>Museo Nacional de Antropología</li>
+                    <li>Museo Soumaya</li>
+                    <li>Museo Frida Kahlo</li>
+                    <li>Museo Nacional de Historia (Castillo de Chapultepec)</li>
+                    <li>Museo de Arte Moderno</li>
+                    <li>Museo Jumex</li>
+                    <li>Museo Tamayo</li>
+                    <li>Museo Universitario Arte Contemporáneo (MUAC)</li>
+                </ul>
+                <h3>Parques y Espacios Verdes</h3>
+                <ul>
+                    <li>Bosque de Chapultepec</li>
+                    <li>Parque México</li>
+                    <li>Alameda Central</li>
+                    <li>Parque Ecológico de Xochimilco</li>
+                    <li>Parque Hundido</li>
+                    <li>Bosque de Tlalpan</li>
+                    <li>Parque La Mexicana</li>
+                    <li>Viveros de Coyoacán</li>
+                </ul>
+                <h3>Venues Deportivos</h3>
+                <ul>
+                    <li>Estadio Azteca (Club América, Cruz Azul)</li>
+                    <li>Estadio Olímpico Universitario (Pumas UNAM)</li>
+                    <li>Arena Ciudad de México</li>
+                    <li>Autódromo Hermanos Rodríguez</li>
+                    <li>Hipódromo de las Américas</li>
+                    <li>Arena México (Lucha Libre)</li>
+                </ul>
+            </div>
+        </div>
+        <div id="email-signup">
             <h2>¡Gana Boletos Gratis!</h2>
             <form id="email-form">
                 <input type="email" id="email" required placeholder="Tu correo electrónico">
                 <button type="submit">Participar</button>
             </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 CDMX Hoy. Todos los derechos reservados.</p>
-    </footer>
-
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

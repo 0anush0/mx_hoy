@@ -1,109 +1,32 @@
-{
-    "concerts": [
-        {
-            "name": "Iron Maiden",
-            "date": "2024-11-01",
-            "venue": "Auditorio Nacional",
-            "time": "20:00",
-            "description": "Iron Maiden in concert"
-        },
-        {
-            "name": "Coldplay",
-            "date": "2024-11-05",
-            "venue": "Foro Sol",
-            "time": "19:30",
-            "description": "Coldplay performing live"
-        },
-        {
-            "name": "Shakira",
-            "date": "2024-11-10",
-            "venue": "Palacio de los Deportes",
-            "time": "18:00",
-            "description": "Shakira live in concert"
-        },
-        {
-            "name": "Luis Miguel",
-            "date": "2024-11-12",
-            "venue": "Arena Ciudad De Mexico",
-            "time": "21:00",
-            "description": "Luis Miguel concert"
-        },
-        {
-            "name": "Café Tacvba",
-            "date": "2024-11-20",
-            "venue": "Teatro Metropolitan",
-            "time": "20:30",
-            "description": "Café Tacvba in performance"
-        },
-        {
-            "name": "La Oreja de Van Gogh",
-            "date": "2024-11-25",
-            "venue": "La Maraka",
-            "time": "22:00",
-            "description": "La Oreja de Van Gogh"
-        },
-        {
-            "name": "Los Angeles Azules",
-            "date": "2024-12-01",
-            "venue": "El Lunario",
-            "time": "19:00",
-            "description": "Concert by Los Angeles Azules"
-        },
-        {
-            "name": "Formula 1 Mexican Grand Prix",
-            "date": "2024-12-08",
-            "venue": "Autódromo Hermanos Rodríguez",
-            "time": "13:00",
-            "description": "F1 race event"
-        },
-        {
-            "name": "Mana",
-            "date": "2024-12-15",
-            "venue": "Estadio GNP Seguros",
-            "time": "20:00",
-            "description": "Mana concert"
-        },
-        {
-            "name": "J Balvin",
-            "date": "2024-12-20",
-            "venue": "Pepsi Center WTC",
-            "time": "20:30",
-            "description": "J Balvin live"
-        },
-        {
-            "name": "Ricky Martin",
-            "date": "2024-12-25",
-            "venue": "Auditorio Nacional",
-            "time": "21:00",
-            "description": "Ricky Martin Christmas Special"
-        },
-        {
-            "name": "Metallica",
-            "date": "2025-01-05",
-            "venue": "Foro Sol",
-            "time": "19:00",
-            "description": "Metallica World Tour"
-        },
-        {
-            "name": "Alejandro Fernández",
-            "date": "2025-01-10",
-            "venue": "Arena Ciudad De Mexico",
-            "time": "20:30",
-            "description": "Alejandro Fernández in concert"
-        },
-        {
-            "name": "Zoé",
-            "date": "2025-01-15",
-            "venue": "Palacio de los Deportes",
-            "time": "21:00",
-            "description": "Zoé Unplugged"
-        },
-        {
-            "name": "Molotov",
-            "date": "2025-01-20",
-            "venue": "Teatro Metropolitan",
-            "time": "22:00",
-            "description": "Molotov Rock Night"
-        }
-    ]
-}
+[
+  {
+    "name": "Concierto de Rock en el Foro Sol",
+    "date": "2024-11-15",
+    "location": "Foro Sol",
+    "description": "Gran concierto de rock con bandas nacionales e internacionales."
+  },
+  {
+    "name": "Exposición de Arte Moderno",
+    "date": "2024-11-20",
+    "location": "Museo Tamayo",
+    "description": "Exhibición de obras de artistas contemporáneos mexicanos."
+  },
+  {
+    "name": "Partido de Fútbol: América vs. Pumas",
+    "date": "2024-11-25",
+    "location": "Estadio Azteca",
+    "description": "Clásico capitalino de la Liga MX."
+  },
+  {
+    "name": "Festival de Jazz en el Parque México",
+    "date": "2024-12-01",
+    "location": "Parque México",
+    "description": "Disfruta de los mejores músicos de jazz en un ambiente al aire libre."
+  },
+  {
+    "name": "Noche de Museos",
+    "date": "2024-12-10",
+    "location": "Varios museos de la ciudad",
+    "description": "Visita nocturna a los principales museos de la Ciudad de México."
+  }
+]
