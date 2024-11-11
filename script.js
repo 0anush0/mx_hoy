@@ -57,65 +57,114 @@ function displayEvents(events) {
     });
 }
 
-function loadPlaces() {
-    const places = {
-        'Venues': ['Foro Sol', 'Palacio de los Deportes', 'Auditorio Nacional', 'Teatro de la Ciudad'],
-        'Museos': ['Museo Nacional de Antropología', 'Museo Soumaya', 'MUAC', 'Museo Frida Kahlo'],
-        'Cines': ['Cineteca Nacional', 'Cine Tonalá', 'Cinépolis', 'Cinemex'],
-        'Teatros': ['Teatro Metropólitan', 'Teatro de los Insurgentes', 'Teatro Hidalgo', 'Foro Shakespeare']
-    };
-
-    const placeGrid = document.querySelector('.place-grid');
-    for (const [category, placeList] of Object.entries(places)) {
-        const categoryElement = document.createElement('div');
-        categoryElement.classList.add('place-category');
-        categoryElement.innerHTML = `
-            <h3>${category}</h3>
-            <ul>
-                ${placeList.map(place => `<li>${place}</li>`).join('')}
-            </ul>
-        `;
-        placeGrid.appendChild(categoryElement);
-    }
-}
-
-function loadCategories() {
-    const categories = ['Conciertos', 'Cine', 'Teatro', 'Deportes', 'Exposiciones', 'Charlas', 'Clases', 'Tours'];
-    const categorySelect = document.getElementById('event-category');
-    categories.forEach(category => {
-        const option = document.createElement('option');
-        option.value = category.toLowerCase();
-        option.textContent = category;
-        categorySelect.appendChild(option);
-    });
-}
-
-function filterEvents() {
-    const searchTerm = document.getElementById('event-search').value.toLowerCase();
-    const category = document.getElementById('event-category').value.toLowerCase();
-    const events = document.querySelectorAll('.event');
-
-    events.forEach(event => {
-        const eventName = event.querySelector('h3').textContent.toLowerCase();
-        const eventTags = Array.from(event.querySelectorAll('.event-tag')).map(tag => tag.textContent.toLowerCase());
-        const matchesSearch = eventName.includes(searchTerm);
-        const matchesCategory = category === '' || eventTags.includes(category);
-
-        if (matchesSearch && matchesCategory) {
-            event.style.display = 'block';
-        } else {
-            event.style.display = 'none';
+const places = {
+    "Movie Theaters": [
+        {
+            name: "Cinépolis | Forum Buenavista",
+            type: "Movie Theater",
+            neighborhood: "Cuauhtémoc",
+            address: "Av. Insurgentes Nte. 259, Buenavista, Cuauhtémoc, 06350",
+            link: "http://www.cinepolis.com"
+        },
+        {
+            name: "La Casa del Cine",
+            type: "Movie Theater",
+            neighborhood: "Cuauhtémoc",
+            address: "República de Uruguay 52-segundo piso, Centro Histórico de la Cdad. de México",
+            link: "http://lacasadelcine.mx"
+        },
+        {
+            name: "Cineteca Nacional",
+            type: "Movie Theater",
+            neighborhood: "Benito Juárez",
+            address: "Av. México Coyoacán 389, Xoco, 03330",
+            link: "http://www.cinetecanacional.net"
+        },
+        {
+            name: "Cine Tonalá",
+            type: "Movie Theater",
+            neighborhood: "Cuauhtémoc",
+            address: "Tonalá 261, Roma Sur, 06760",
+            link: "http://www.cinetonala.mx"
+        },
+        {
+            name: "Cinépolis Diana",
+            type: "Movie Theater",
+            neighborhood: "Cuauhtémoc",
+            address: "Av. P.º de la Reforma 423, 06500",
+            link: "https://cinepolis.com/cartelera/cdmx-centro/cinepolis-diana"
         }
-    });
-}
-
-async function loadWeather() {
-    // This is a placeholder. In a real application, you would fetch weather data from an API
-    const weatherWidget = document.getElementById('weather-widget');
-    weatherWidget.innerHTML = '<h3>Clima en CDMX</h3><p>22°C, Parcialmente nublado</p>';
-}
-
-async function submitEmail(email) {
-    console.log(`Email submitted: ${email}`);
-    alert('¡Gracias por suscribirte! Te mantendremos informado sobre los mejores eventos en CDMX.');
-}
+    ],
+    "Concert Venues": [
+        {
+            name: "Teatro Metropólitan",
+            type: "Concert Venue",
+            neighborhood: "Cuauhtémoc",
+            address: "Av. Independencia 90, 06700",
+            link: "https://www.teatrometropolitan.com"
+        },
+        {
+            name: "Pepsi Center WTC",
+            type: "Concert Venue",
+            neighborhood: "Benito Juárez",
+            address: "Avenida de los Insurgentes Sur 706, 03870",
+            link: "https://www.pepsicenterwtc.com"
+        },
+        {
+            name: "Foro Sol",
+            type: "Concert Venue",
+            neighborhood: "Iztacalco",
+            address: "Av. Viaducto Río de la Piedad y Río Churubusco s/n, Granjas México, 08400",
+            link: "https://www.forosol.mx"
+        },
+        {
+            name: "Palacio de los Deportes",
+            type: "Concert Venue",
+            neighborhood: "Iztacalco",
+            address: "Av. Río Churubusco y Añil s/n, Granjas México, 08400",
+            link: "https://www.palaciodelosdeportes.com.mx"
+        }
+    ],
+    "Museums": [
+        {
+            name: "Museo Nacional de Antropología",
+            type: "Museum",
+            neighborhood: "Chapultepec",
+            address: "Av. Paseo de la Reforma & Calzada Gandhi, Chapultepec Polanco, 11560",
+            link: "https://mna.inah.gob.mx/"
+        },
+        {
+            name: "Museo Soumaya",
+            type: "Museum",
+            neighborhood: "Polanco",
+            address: "Blvd. Miguel de Cervantes Saavedra 303, Granada, 11529",
+            link: "https://www.museosoumaya.org/"
+        },
+        {
+            name: "Museo Universitario Arte Contemporáneo",
+            type: "Museum",
+            neighborhood: "Coyoacán",
+            address: "Insurgentes Sur 3000, C.U., 04510",
+            link: "https://muac.unam.mx/"
+        },
+        {
+            name: "Museo Frida Kahlo",
+            type: "Museum",
+            neighborhood: "Coyoacán",
+            address: "Londres 247, Del Carmen, 04100",
+            link: "https://www.museofridakahlo.org.mx/"
+        }
+    ],
+    "Sports Arenas": [
+        {
+            name: "Estadio Azteca",
+            type: "Sports Arena",
+            neighborhood: "Coyoacán",
+            address: "Calz. de Tlalpan 3465, Santa Úrsula Coapa, 04650",
+            link: "https://www.estadioazteca.com.mx/",
+            teams: ["Club América", "Cruz Azul"]
+        },
+        {
+            name: "Estadio Olímpico Universitario",
+            type: "Sports Arena",
+            neighborhood: "Coyoacán
