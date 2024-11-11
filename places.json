@@ -1,179 +1,107 @@
 [
   {
-    "name": "Foro Sol",
-    "type": "Concert Venue",
-    "neighborhood": "Iztacalco",
-    "address": "Av. Viaducto Río de la Piedad, Granjas México, 08400",
-    "link": "https://www.ocesa.com.mx/venues/foro-sol/"
+    "name": "Concierto de Rock en el Foro Sol",
+    "date": "2024-11-15",
+    "location": "Foro Sol",
+    "description": "Gran concierto de rock con bandas nacionales e internacionales.",
+    "tags": ["conciertos", "rock", "música"]
   },
   {
-    "name": "Palacio de los Deportes",
-    "type": "Concert Venue",
-    "neighborhood": "Iztacalco",
-    "address": "Av. Río Churubusco y Añil s/n, Granjas México, 08400",
-    "link": "https://www.palaciodelosdeportes.com.mx/"
+    "name": "Festival de Cine Independiente",
+    "date": "2024-11-20",
+    "location": "Cineteca Nacional",
+    "description": "Muestra de películas independientes de directores emergentes.",
+    "tags": ["cine", "festival", "cultura"]
   },
   {
-    "name": "Auditorio Nacional",
-    "type": "Concert Venue",
-    "neighborhood": "Miguel Hidalgo",
-    "address": "Av. Paseo de la Reforma 50, Bosque de Chapultepec, 11580",
-    "link": "https://www.auditorio.com.mx/"
+    "name": "Obra de Teatro: 'La Casa de Bernarda Alba'",
+    "date": "2024-11-25",
+    "location": "Teatro de la Ciudad",
+    "description": "Representación de la famosa obra de Federico García Lorca.",
+    "tags": ["teatro", "cultura", "literatura"]
   },
   {
-    "name": "Teatro Metropólitan",
-    "type": "Concert Venue",
-    "neighborhood": "Cuauhtémoc",
-    "address": "Independencia 90, Centro Histórico, 06050",
-    "link": "https://www.teatrometropolitan.com/"
+    "name": "Partido de Fútbol: América vs. Pumas",
+    "date": "2024-12-01",
+    "location": "Estadio Azteca",
+    "description": "Clásico capitalino de la Liga MX.",
+    "tags": ["deportes", "fútbol"]
   },
   {
-    "name": "El Plaza Condesa",
-    "type": "Concert Venue",
-    "neighborhood": "Cuauhtémoc",
-    "address": "Juan Escutia 4, Condesa, 06140",
-    "link": "https://plazacondesa.com.mx/"
+    "name": "Exposición de Arte Contemporáneo",
+    "date": "2024-12-10",
+    "location": "MUAC",
+    "description": "Muestra de artistas contemporáneos mexicanos e internacionales.",
+    "tags": ["exposiciones", "arte", "cultura"]
   },
   {
-    "name": "Teatro de la Ciudad Esperanza Iris",
-    "type": "Theater",
-    "neighborhood": "Cuauhtémoc",
-    "address": "Donceles 36, Centro Histórico, 06010",
-    "link": "https://teatrodelaciudadmexico.com/"
+    "name": "Charla: 'El Futuro de la Inteligencia Artificial'",
+    "date": "2024-12-15",
+    "location": "Teatro Metropólitan",
+    "description": "Conferencia sobre los avances y desafíos de la IA.",
+    "tags": ["charlas", "tecnología", "ciencia"]
   },
   {
-    "name": "Teatro de los Insurgentes",
-    "type": "Theater",
-    "neighborhood": "Benito Juárez",
-    "address": "Av. Insurgentes Sur 1587, San José Insurgentes, 03900",
-    "link": "https://teatroinsurgentes.com/"
+    "name": "Clase Magistral de Cocina Mexicana",
+    "date": "2024-12-20",
+    "location": "Escuela de Gastronomía",
+    "description": "Aprende los secretos de la cocina tradicional mexicana.",
+    "tags": ["clases", "gastronomía", "cultura"]
   },
   {
-    "name": "Teatro Telcel",
-    "type": "Theater",
-    "neighborhood": "Cuauhtémoc",
-    "address": "Lago Zurich 245, Ampliación Granada, 11529",
-    "link": "https://teatrotelcel.com/"
+    "name": "Tour Nocturno por el Centro Histórico",
+    "date": "2024-12-25",
+    "location": "Zócalo",
+    "description": "Recorrido guiado por los lugares más emblemáticos del Centro Histórico.",
+    "tags": ["tours", "historia", "cultura"]
   },
   {
-    "name": "Teatro Helénico",
-    "type": "Theater",
-    "neighborhood": "Miguel Hidalgo",
-    "address": "Av. Revolución 1500, Guadalupe Inn, 01020",
-    "link": "https://helenico.gob.mx/"
+    "name": "Concierto de Jazz en el Lunario",
+    "date": "2025-01-05",
+    "location": "Lunario del Auditorio Nacional",
+    "description": "Noche de jazz con artistas locales e internacionales.",
+    "tags": ["conciertos", "jazz", "música"]
   },
   {
-    "name": "Cineteca Nacional",
-    "type": "Movie Theater",
-    "neighborhood": "Coyoacán",
-    "address": "Av. México Coyoacán 389, Xoco, 03330",
-    "link": "https://www.cinetecanacional.net/"
+    "name": "Estreno de Película Blockbuster",
+    "date": "2025-01-10",
+    "location": "Cinépolis Perisur",
+    "description": "Estreno de la película más esperada del año.",
+    "tags": ["cine", "entretenimiento"]
   },
   {
-    "name": "Cinépolis Universidad",
-    "type": "Movie Theater",
-    "neighborhood": "Coyoacán",
-    "address": "Av. Universidad 1000, Santa Cruz Atoyac, 03310",
-    "link": "https://cinepolis.com/"
+    "name": "Partido de Béisbol: Diablos Rojos vs. Sultanes",
+    "date": "2025-01-15",
+    "location": "Estadio Alfredo Harp Helú",
+    "description": "Emocionante juego de la Liga Mexicana de Béisbol.",
+    "tags": ["deportes", "béisbol"]
   },
   {
-    "name": "Cinemex Reforma 222",
-    "type": "Movie Theater",
-    "neighborhood": "Cuauhtémoc",
-    "address": "Paseo de la Reforma 222, Juárez, 06600",
-    "link": "https://cinemex.com/"
+    "name": "Festival de Música Electrónica",
+    "date": "2025-01-20",
+    "location": "Autódromo Hermanos Rodríguez",
+    "description": "Gran festival con los mejores DJs internacionales.",
+    "tags": ["conciertos", "música electrónica", "festival"]
   },
   {
-    "name": "Museo Nacional de Antropología",
-    "type": "Museum",
-    "neighborhood": "Miguel Hidalgo",
-    "address": "Av. Paseo de la Reforma & Calzada Gandhi, Chapultepec Polanco, 11560",
-    "link": "https://www.mna.inah.gob.mx/"
+    "name": "Picnic en el Bosque de Chapultepec",
+    "date": "2025-01-25",
+    "location": "Bosque de Chapultepec",
+    "description": "Día de campo en el pulmón verde de la ciudad.",
+    "tags": ["parques", "naturaleza", "recreación"]
   },
   {
-    "name": "Museo Soumaya",
-    "type": "Museum",
-    "neighborhood": "Miguel Hidalgo",
-    "address": "Blvd. Miguel de Cervantes Saavedra 303, Granada, 11529",
-    "link": "https://www.museosoumaya.org/"
+    "name": "Noche de Stand-Up Comedy",
+    "date": "2025-02-01",
+    "location": "El Vicio",
+    "description": "Show de comedia con los mejores comediantes de la ciudad.",
+    "tags": ["comedia", "entretenimiento"]
   },
   {
-    "name": "Museo Frida Kahlo",
-    "type": "Museum",
-    "neighborhood": "Coyoacán",
-    "address": "Londres 247, Del Carmen, 04100",
-    "link": "https://www.museofridakahlo.org.mx/"
-  },
-  {
-    "name": "Museo Jumex",
-    "type": "Museum",
-    "neighborhood": "Miguel Hidalgo",
-    "address": "Miguel de Cervantes Saavedra 303, Granada, 11520",
-    "link": "https://www.fundacionjumex.org/"
-  },
-  {
-    "name": "Bosque de Chapultepec",
-    "type": "Park",
-    "neighborhood": "Miguel Hidalgo",
-    "address": "Paseo de la Reforma s/n, Bosque de Chapultepec, 11100",
-    "link": "https://www.sedema.cdmx.gob.mx/programas/programa/bosque-de-chapultepec"
-  },
-  {
-    "name": "Parque México",
-    "type": "Park",
-    "neighborhood": "Cuauhtémoc",
-    "address": "Av. México s/n, Hipódromo, 06100",
-    "link": "https://www.sedema.cdmx.gob.mx/programas/programa/parque-mexico"
-  },
-  {
-    "name": "Parque La Mexicana",
-    "type": "Park",
-    "neighborhood": "Cuajimalpa",
-    "address": "Av. Luis Barragán 505, Santa Fe, 05348",
-    "link": "https://www.parquelamexicana.mx/"
-  },
-  {
-    "name": "Viveros de Coyoacán",
-    "type": "Park",
-    "neighborhood": "Coyoacán",
-    "address": "Av. Progreso 1, Del Carmen, 04100",
-    "link": "https://www.gob.mx/conanp/acciones-y-programas/viveros-de-coyoacan"
-  },
-  {
-    "name": "Estadio Azteca",
-    "type": "Sports Venue",
-    "neighborhood": "Coyoacán",
-    "address": "Calzada de Tlalpan 3465, Santa Úrsula Coapa, 04650",
-    "link": "https://www.estadioazteca.com.mx/",
-    "teams": ["Club América", "Cruz Azul"]
-  },
-  {
-    "name": "Estadio Olímpico Universitario",
-    "type": "Sports Venue",
-    "neighborhood": "Coyoacán",
-    "address": "Av. Insurgentes Sur s/n, Ciudad Universitaria, 04510",
-    "link": "https://www.pumas.mx/",
-    "teams": ["Pumas UNAM"]
-  },
-  {
-    "name": "Autódromo Hermanos Rodríguez",
-    "type": "Sports Venue",
-    "neighborhood": "Iztacalco",
-    "address": "Av. Viaducto Río de la Piedad s/n, Granjas México, 08400",
-    "link": "https://www.autodromohermanosrodriguez.com/"
-  },
-  {
-    "name": "Arena Ciudad de México",
-    "type": "Sports Venue",
-    "neighborhood": "Azcapotzalco",
-    "address": "Av. de las Granjas 800, Santa Barbara, 02230",
-    "link": "https://www.arenaciudaddemexico.com/"
-  },
-  {
-    "name": "Frontón México",
-    "type": "Sports Venue",
-    "neighborhood": "Cuauhtémoc",
-    "address": "Plaza de la República 17, Tabacalera, 06030",
-    "link": "https://www.frontonmexico.com/"
+    "name": "Fiesta Electrónica en Departamento",
+    "date": "2025-02-05",
+    "location": "Departamento",
+    "description": "Noche de música electrónica en uno de los mejores clubs de la ciudad.",
+    "tags": ["clubes", "música electrónica", "fiesta"]
   }
 ]
