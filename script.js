@@ -100,7 +100,7 @@ function getCategoryIcon(category) {
 }
 
 function loadCategories() {
-    const eventCategories = ['Conciertos', 'Cine', 'Teatro', 'Deportes', 'Exposiciones', 'Charlas', 'Clases', 'Tours'];
+    const eventCategories = ['Conciertos', 'Cine', 'Teatro', 'Deportes', 'Exposiciones', 'Charlas', 'Clases', 'Tours', 'Música', 'Festival', 'Cultura', 'Literatura', 'Fútbol', 'Arte', 'Tecnología', 'Ciencia', 'Gastronomía'];
     const placeCategories = ['Concert Venue', 'Movie Theater', 'Theater', 'Sports Venue', 'Museum', 'Park', 'Cultural Center'];
 
     populateCategories('event-category', eventCategories);
