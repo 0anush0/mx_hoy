@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('event-search').addEventListener('input', filterEvents);
     document.getElementById('event-category').addEventListener('change', filterEvents);
-
     document.getElementById('places-search').addEventListener('input', filterPlaces);
     document.getElementById('places-category').addEventListener('change', filterPlaces);
 });
@@ -43,18 +42,32 @@ async function loadEvents() {
 function displayEvents(events) {
     const eventList = document.getElementById('event-list');
     eventList.innerHTML = '';
+
     events.forEach(event => {
         const eventElement = document.createElement('div');
         eventElement.classList.add('event');
+
+        const icon = getCategoryIcon(event.tags[0]);
         eventElement.innerHTML = `
+            <i class="${icon} category-icon"></i>
             <h3>${event.name}</h3>
-            <p>${event.date} - ${event.location}</p>
-            <p>${event.description}</p>
+            <p class="event-date">${formatDate(event.date)}</p>
+            <p class="event-location">${event.location}</p>
+            <p class="event-description">${event.description}</p>
             <div class="event-tags">
                 ${event.tags.map(tag => `<span class="event-tag">${tag}</span>`).join('')}
             </div>
         `;
         eventList.appendChild(eventElement);
+    });
+}
+
+function formatDate(dateStr) {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('es-MX', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
     });
 }
 
@@ -71,15 +84,19 @@ async function loadPlaces() {
 function displayPlaces(places) {
     const placesList = document.getElementById('places-list');
     placesList.innerHTML = '';
+
     places.forEach(place => {
         const placeElement = document.createElement('div');
         placeElement.classList.add('place');
+
+        const icon = getCategoryIcon(place.type);
         placeElement.innerHTML = `
-            <h3><i class="${getCategoryIcon(place.type)}"></i> ${place.name}</h3>
+            <i class="${icon} category-icon"></i>
+            <h3>${place.name}</h3>
             <p>Tipo: ${place.type}</p>
             <p>Colonia: ${place.neighborhood}</p>
             <p>Dirección: ${place.address}</p>
-            <a href="${place.link}" target="_blank">Sitio Web</a>
+            ${place.website ? `<p>Sitio Web: ${place.website}</p>` : ''}
             ${place.teams ? `<p>Equipos: ${place.teams.join(', ')}</p>` : ''}
         `;
         placesList.appendChild(placeElement);
@@ -88,6 +105,20 @@ function displayPlaces(places) {
 
 function getCategoryIcon(category) {
     const icons = {
+        'conciertos': 'fas fa-music',
+        'rock': 'fas fa-guitar',
+        'cine': 'fas fa-film',
+        'festival': 'fas fa-star',
+        'teatro': 'fas fa-theater-masks',
+        'deportes': 'fas fa-basketball-ball',
+        'fútbol': 'fas fa-futbol',
+        'exposiciones': 'fas fa-palette',
+        'arte': 'fas fa-paint-brush',
+        'charlas': 'fas fa-microphone',
+        'tecnología': 'fas fa-laptop-code',
+        'ciencia': 'fas fa-atom',
+        'gastronomía': 'fas fa-utensils',
+        'literatura': 'fas fa-book',
         'Movie Theater': 'fas fa-film',
         'Concert Venue': 'fas fa-music',
         'Museum': 'fas fa-landmark',
@@ -96,12 +127,23 @@ function getCategoryIcon(category) {
         'Cultural Center': 'fas fa-palette',
         'Park': 'fas fa-tree'
     };
-    return icons[category] || 'fas fa-map-marker-alt';
+    return icons[category.toLowerCase()] || 'fas fa-calendar-alt';
 }
 
 function loadCategories() {
-    const eventCategories = ['Conciertos', 'Cine', 'Teatro', 'Deportes', 'Exposiciones', 'Charlas', 'Clases', 'Tours', 'Música', 'Festival', 'Cultura', 'Literatura', 'Fútbol', 'Arte', 'Tecnología', 'Ciencia', 'Gastronomía', 'Historia', 'Jazz', 'Entretenimiento', 'Béisbol', 'Música Electrónica', 'Parques', 'Naturaleza', 'Recreación', 'Comedia', 'Clubes', 'Fiesta'];
-    const placeCategories = ['Movie Theater', 'Concert Venue', 'Museum', 'Sports Arena', 'Theater', 'Cultural Center', 'Park'];
+    const eventCategories = [
+        'Conciertos', 'Cine', 'Teatro', 'Deportes', 'Exposiciones',
+        'Charlas', 'Clases', 'Tours', 'Música', 'Festival', 'Cultura',
+        'Literatura', 'Fútbol', 'Arte', 'Tecnología', 'Ciencia',
+        'Gastronomía', 'Historia', 'Jazz', 'Entretenimiento', 'Béisbol',
+        'Música Electrónica', 'Parques', 'Naturaleza', 'Recreación',
+        'Comedia', 'Clubes', 'Fiesta'
+    ];
+
+    const placeCategories = [
+        'Movie Theater', 'Concert Venue', 'Museum', 'Sports Arena',
+        'Theater', 'Cultural Center', 'Park'
+    ];
 
     populateCategories('event-category', eventCategories);
     populateCategories('places-category', placeCategories);
@@ -110,6 +152,7 @@ function loadCategories() {
 function populateCategories(selectId, categories) {
     const categorySelect = document.getElementById(selectId);
     categorySelect.innerHTML = '<option value="">Todas las categorías</option>';
+
     categories.forEach(category => {
         const option = document.createElement('option');
         option.value = category.toLowerCase();
@@ -125,45 +168,5 @@ function filterEvents() {
 
     events.forEach(event => {
         const eventName = event.querySelector('h3').textContent.toLowerCase();
-        const eventTags = Array.from(event.querySelectorAll('.event-tag')).map(tag => tag.textContent.toLowerCase());
-        const matchesSearch = eventName.includes(searchTerm);
-        const matchesCategory = category === '' || eventTags.includes(category);
-
-        if (matchesSearch && matchesCategory) {
-            event.style.display = 'block';
-        } else {
-            event.style.display = 'none';
-        }
-    });
-}
-
-function filterPlaces() {
-    const searchTerm = document.getElementById('places-search').value.toLowerCase();
-    const category = document.getElementById('places-category').value.toLowerCase();
-    const places = document.querySelectorAll('.place');
-
-    places.forEach(place => {
-        const placeName = place.querySelector('h3').textContent.toLowerCase();
-        const placeType = place.querySelector('p').textContent.toLowerCase();
-        const matchesSearch = placeName.includes(searchTerm);
-        const matchesCategory = category === '' || placeType.includes(category);
-
-        if (matchesSearch && matchesCategory) {
-            place.style.display = 'block';
-        } else {
-            place.style.display = 'none';
-        }
-    });
-}
-
-async function loadWeather() {
-    // This is a placeholder. In a real application, you would fetch weather data from an API
-    const weatherWidget = document.getElementById('weather-widget');
-    weatherWidget.innerHTML = '<p>CDMX: 22°C, Parcialmente nublado</p>';
-}
-
-async function submitEmail(email) {
-    // This is a placeholder. In a real application, you would send this data to your server
-    console.log(`Email submitted: ${email}`);
-    alert('¡Gracias por registrarte! Estarás participando en nuestros próximos sorteos.');
-}
+        const eventTags = Array.from(event.querySelectorAll('.event-tag'))
+            .map(tag => tag.textContent.

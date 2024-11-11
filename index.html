@@ -2,58 +2,60 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CDMX Hoy - Eventos y Lugares</title>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Futura:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>CDMX Hoy</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>CDMX Hoy</h1>
-        <p class="tagline">Tu guía diaria para eventos y lugares en la Ciudad de México</p>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Eventos en CDMX</h1>
+            <p class="tagline">Descubre lo mejor de la ciudad</p>
+        </header>
 
-    <nav>
-        <button class="nav-button active" data-tab="eventos">Eventos</button>
-        <button class="nav-button" data-tab="lugares">Lugares</button>
-    </nav>
+        <nav>
+            <button class="nav-button active" data-tab="events-tab">
+                <i class="fas fa-calendar"></i> Eventos
+            </button>
+            <button class="nav-button" data-tab="places-tab">
+                <i class="fas fa-map-marker-alt"></i> Lugares
+            </button>
+        </nav>
 
-    <main>
-        <div id="eventos" class="tab-content active">
-            <h2>Eventos en CDMX</h2>
-            <div id="event-filters">
-                <input type="text" id="event-search" placeholder="Buscar eventos...">
-                <select id="event-category">
-                    <option value="">Todas las categorías</option>
-                </select>
+        <div id="weather-widget"></div>
+
+        <main>
+            <div id="events-tab" class="tab-content active">
+                <div id="event-filters">
+                    <input type="text" id="event-search" placeholder="Buscar eventos...">
+                    <select id="event-category">
+                        <option value="">Todas las categorías</option>
+                    </select>
+                </div>
+                <div id="event-list" class="event-grid"></div>
             </div>
-            <div id="event-list" class="event-grid"></div>
-        </div>
 
-        <div id="lugares" class="tab-content">
-            <h2>Lugares en CDMX</h2>
-            <div id="places-filters">
-                <input type="text" id="places-search" placeholder="Buscar lugares...">
-                <select id="places-category">
-                    <option value="">Todas las categorías</option>
-                </select>
+            <div id="places-tab" class="tab-content">
+                <div id="places-filters">
+                    <input type="text" id="places-search" placeholder="Buscar lugares...">
+                    <select id="places-category">
+                        <option value="">Todas las categorías</option>
+                    </select>
+                </div>
+                <div id="places-list" class="places-grid"></div>
             </div>
-            <div id="places-list" class="places-grid"></div>
-        </div>
-    </main>
+        </main>
 
-    <section id="email-signup">
-        <h2>¡Gana boletos gratis!</h2>
-        <p>Regístrate para participar en nuestros sorteos de boletos</p>
-        <form id="email-form">
-            <input type="email" id="email" placeholder="Tu correo electrónico" required>
-            <button type="submit">Registrarse</button>
-        </form>
-    </section>
-
-    <div id="weather-widget"></div>
-
+        <section id="email-signup">
+            <h2>¡Gana boletos gratis!</h2>
+            <p>Regístrate para participar en nuestros sorteos de boletos</p>
+            <form id="email-form">
+                <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </section>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

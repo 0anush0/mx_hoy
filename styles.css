@@ -61,7 +61,8 @@ nav {
     text-transform: uppercase;
 }
 
-.nav-button:hover, .nav-button.active {
+.nav-button:hover,
+.nav-button.active {
     background-color: #ffffff;
     color: #4ecdc4;
 }
@@ -81,13 +82,17 @@ h2 {
     text-transform: uppercase;
 }
 
-#event-filters, #places-filters {
+#event-filters,
+#places-filters {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
-#event-search, #event-category, #places-search, #places-category {
+#event-search,
+#event-category,
+#places-search,
+#places-category {
     padding: 10px;
     font-size: 1em;
     border: 2px solid #4ecdc4;
@@ -95,28 +100,33 @@ h2 {
     color: #333;
 }
 
-#event-search, #places-search {
+#event-search,
+#places-search {
     width: 60%;
 }
 
-#event-category, #places-category {
+#event-category,
+#places-category {
     width: 35%;
 }
 
-.event-grid, .places-grid {
+.event-grid,
+.places-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.event, .place {
+.event,
+.place {
     background-color: #ffffff;
     border: 2px solid #ff6b6b;
     padding: 20px;
     transition: transform 0.3s ease;
 }
 
-.event:hover, .place:hover {
+.event:hover,
+.place:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(255,107,107,0.3);
 }
@@ -135,10 +145,10 @@ h2 {
     border-radius: 3px;
 }
 
-h3 {
-    color: #ff6b6b;
+.category-icon {
+    font-size: 2em;
+    color: #4ecdc4;
     margin-bottom: 10px;
-    font-family: 'Futura', sans-serif;
 }
 
 /* Email signup styles */
@@ -163,8 +173,6 @@ h3 {
     padding: 10px;
     font-size: 1em;
     border: none;
-    background-color: #ffffff;
-    color: #333;
     width: 60%;
 }
 
@@ -190,6 +198,7 @@ h3 {
     padding: 20px;
     text-align: center;
     color: #ffffff;
+    margin-bottom: 20px;
 }
 
 /* Tab content styles */
@@ -203,4 +212,21 @@ h3 {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .event-grid, .places-grid {
+    .event-grid,
+    .places-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #event-filters,
+    #places-filters {
+        flex-direction: column;
+    }
+
+    #event-search,
+    #places-search,
+    #event-category,
+    #places-category {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
