@@ -5,44 +5,37 @@
     <title>CDMX Hoy</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
             <h1>CDMX Hoy</h1>
-            <p class="tagline">Descubre lo mejor de la ciudad</p>
+            <nav>
+                <button class="tab-button active" data-tab="events">
+                    <i class="fas fa-calendar"></i> Eventos
+                </button>
+                <button class="tab-button" data-tab="places">
+                    <i class="fas fa-map-marker-alt"></i> Lugares
+                </button>
+            </nav>
         </header>
 
-        <nav>
-            <button class="nav-button active" data-tab="events-tab">
-                <i class="fas fa-calendar"></i> Eventos
-            </button>
-            <button class="nav-button" data-tab="places-tab">
-                <i class="fas fa-map-marker-alt"></i> Lugares
-            </button>
-        </nav>
+        <div class="filters">
+            <input type="text" id="search-input" placeholder="Buscar...">
+            <select id="category-select">
+                <option value="">Todas las categorías</option>
+            </select>
+        </div>
 
         <main>
-            <div id="events-tab" class="tab-content active">
-                <div id="event-filters">
-                    <input type="text" id="event-search" placeholder="Buscar eventos...">
-                    <select id="event-category">
-                        <option value="">Todas las categorías</option>
-                    </select>
-                </div>
-                <div id="event-list" class="event-grid"></div>
-            </div>
+            <section id="events" class="tab-content active">
+                <div class="grid-container" id="events-grid"></div>
+            </section>
 
-            <div id="places-tab" class="tab-content">
-                <div id="places-filters">
-                    <input type="text" id="places-search" placeholder="Buscar lugares...">
-                    <select id="places-category">
-                        <option value="">Todas las categorías</option>
-                    </select>
-                </div>
-                <div id="places-list" class="places-grid"></div>
-            </div>
+            <section id="places" class="tab-content">
+                <div class="grid-container" id="places-grid"></div>
+            </section>
         </main>
     </div>
     <script src="script.js"></script>

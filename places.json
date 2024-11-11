@@ -1,25 +1,16 @@
 {
     "places": [
         {
-            "name": "Foro Sol",
-            "category": "música",
-            "location": "Av. Viaducto Río de la Piedad s/n",
-            "description": "Recinto para conciertos masivos",
-            "capacity": 65000
-        },
-        {
-            "name": "Teatro de la Ciudad",
-            "category": "teatro",
-            "location": "Donceles 36, Centro Histórico",
-            "description": "Teatro histórico con programación variada",
-            "capacity": 1200
+            "name": "Palacio de Bellas Artes",
+            "category": "Teatro",
+            "location": "Centro Histórico",
+            "description": "Icónico recinto cultural con arquitectura Art Nouveau y Art Déco"
         },
         {
             "name": "MUAC",
-            "category": "museo",
-            "location": "Insurgentes Sur 3000, CU",
-            "description": "Museo Universitario Arte Contemporáneo",
-            "type": "arte contemporáneo"
+            "category": "Museo",
+            "location": "Ciudad Universitaria",
+            "description": "Museo Universitario Arte Contemporáneo con exposiciones vanguardistas"
         }
     ]
 }

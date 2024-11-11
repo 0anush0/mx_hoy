@@ -1,28 +1,18 @@
 {
     "events": [
         {
-            "name": "Concierto de Rock en el Foro Sol",
+            "name": "Festival de Jazz CDMX",
             "date": "2024-11-15",
-            "location": "Foro Sol",
-            "description": "Gran concierto de rock con bandas nacionales e internacionales",
-            "category": "música",
-            "tags": ["rock", "música", "concierto"]
+            "location": "Auditorio Nacional",
+            "description": "Festival internacional de jazz con artistas de todo el mundo",
+            "tags": ["Música", "Jazz", "Festival"]
         },
         {
-            "name": "Festival de Teatro Independiente",
+            "name": "Exposición de Arte Digital",
             "date": "2024-11-20",
-            "location": "Teatro de la Ciudad",
-            "description": "Muestra de obras de teatro independiente",
-            "category": "teatro",
-            "tags": ["teatro", "cultura", "arte"]
-        },
-        {
-            "name": "Exposición de Arte Contemporáneo",
-            "date": "2024-11-25",
-            "location": "MUAC",
-            "description": "Exhibición de artistas emergentes",
-            "category": "arte",
-            "tags": ["arte", "exposición", "cultura"]
+            "location": "Centro Cultural Digital",
+            "description": "Muestra de arte digital e instalaciones interactivas",
+            "tags": ["Arte", "Tecnología", "Exposición"]
         }
     ]
 }
