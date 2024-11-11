@@ -1,16 +1,725 @@
 {
-    "places": [
+    "museums": [
         {
-            "name": "Palacio de Bellas Artes",
-            "category": "Teatro",
-            "location": "Centro Histórico",
-            "description": "Icónico recinto cultural con arquitectura Art Nouveau y Art Déco"
+            "name": "Museo Nacional de Antropología",
+            "category": "Museum",
+            "subcategories": ["Anthropology", "History", "Archaeology"],
+            "location": "https://goo.gl/maps/YBQqQZ5o6VsFnkYt7",
+            "website": "https://www.mna.inah.gob.mx",
+            "area": "Chapultepec",
+            "tags": ["archaeology", "history", "main museum"]
+        },
+        {
+            "name": "Museo Nacional de Arte (MUNAL)",
+            "category": "Museum",
+            "subcategories": ["Art", "History"],
+            "location": "https://goo.gl/maps/abc123",
+            "website": "https://www.munal.mx",
+            "area": "Centro Histórico",
+            "tags": ["art", "history", "national museum"]
+        },
+        {
+            "name": "Museo Frida Kahlo (Casa Azul)",
+            "category": "Museum",
+            "subcategories": ["Art", "Biography"],
+            "location": "https://goo.gl/maps/def456",
+            "website": "https://www.museofridakahlo.org.mx",
+            "area": "Coyoacán",
+            "tags": ["art", "frida kahlo", "house museum"]
         },
         {
             "name": "MUAC",
-            "category": "Museo",
-            "location": "Ciudad Universitaria",
-            "description": "Museo Universitario Arte Contemporáneo con exposiciones vanguardistas"
-        }
+            "category": "Museum",
+            "subcategories": ["Contemporary Art"],
+            "location": "https://goo.gl/maps/ghi789",
+            "website": "https://muac.unam.mx",
+            "area": "Ciudad Universitaria",
+            "tags": ["contemporary art", "UNAM"]
+        },
+        {
+            "name": "Museo Soumaya",
+            "category": "Museum",
+            "subcategories": ["Art"],
+            "location": "https://goo.gl/maps/jkl012",
+            "website": "https://www.museosoumaya.org",
+            "area": "Polanco",
+            "tags": ["art", "private collection"]
+        },
+        {
+            "name": "Museo del Templo Mayor",
+            "category": "Museum",
+            "subcategories": ["Archaeology", "History"],
+            "location": "https://goo.gl/maps/mno345",
+            "website": "https://www.templomayor.inah.gob.mx",
+            "area": "Centro Histórico",
+            "tags": ["archaeology", "aztec", "ruins"]
+        },
+        {
+            "name": "Museo Nacional de Historia (Castillo de Chapultepec)",
+            "category": "Museum",
+            "subcategories": ["History", "Architecture"],
+            "location": "https://goo.gl/maps/pqr678",
+            "website": "https://www.castillodechapultepec.inah.gob.mx",
+            "area": "Chapultepec",
+            "tags": ["history", "castle", "national museum"]
+        },
+        {
+            "name": "Museo de Arte Moderno",
+            "category": "Museum",
+            "subcategories": ["Modern Art"],
+            "location": "https://goo.gl/maps/stu901",
+            "website": "https://www.mam.inba.gob.mx",
+            "area": "Chapultepec",
+            "tags": ["modern art", "sculpture garden"]
+        },
+        {
+            "name": "Museo Jumex",
+            "category": "Museum",
+            "subcategories": ["Contemporary Art"],
+            "location": "https://goo.gl/maps/vwx234",
+            "website": "https://www.fundacionjumex.org",
+            "area": "Polanco",
+            "tags": ["contemporary art", "private collection"]
+        },
+        {
+            "name": "Museo de la Ciudad de México",
+            "category": "Museum",
+            "subcategories": ["History", "Art"],
+            "location": "https://goo.gl/maps/yz567",
+            "website": "https://www.cultura.cdmx.gob.mx/recintos/mcm",
+            "area": "Centro Histórico",
+            "tags": ["city history", "art exhibitions"]
+        },
+        {
+            "name": "Museo Franz Mayer",
+            "category": "Museum",
+            "subcategories": ["Decorative Arts", "Design"],
+            "location": "https://goo.gl/maps/abc890",
+            "website": "https://www.franzmayer.org.mx",
+            "area": "Centro Histórico",
+            "tags": ["decorative arts", "design"]
+        },
+        {
+            "name": "Museo Dolores Olmedo",
+            "category": "Museum",
+            "subcategories": ["Art", "Folk Art"],
+            "location": "https://goo.gl/maps/def123",
+            "website": "https://www.museodoloresolmedo.org.mx",
+            "area": "Xochimilco",
+            "tags": ["art", "folk art", "diego rivera"]
+        },
+        {
+            "name": "Museo Nacional de las Culturas",
+            "category": "Museum",
+            "subcategories": ["Anthropology", "World Cultures"],
+            "location": "https://goo.gl/maps/ghi456",
+            "website": "https://www.museodelasculturas.mx",
+            "area": "Centro Histórico",
+            "tags": ["world cultures", "anthropology"]
+        },
+        {
+            "name": "Museo de Arte Carrillo Gil",
+            "category": "Museum",
+            "subcategories": ["Contemporary Art"],
+            "location": "https://goo.gl/maps/jkl789",
+            "website": "https://www.macg.inba.gob.mx",
+            "area": "San Ángel",
+            "tags": ["contemporary art", "exhibitions"]
+        },
+        {
+            "name": "Museo Casa de León Trotsky",
+            "category": "Museum",
+            "subcategories": ["History", "Biography"],
+            "location": "https://goo.gl/maps/mno012",
+            "website": "https://www.museocasadeleontrotsky.mx",
+            "area": "Coyoacán",
+            "tags": ["history", "trotsky", "house museum"]
+        },
+        {
+            "name": "Museo de Historia Natural",
+            "category": "Museum",
+            "subcategories": ["Natural History", "Science"],
+            "location": "https://goo.gl/maps/pqr345",
+            "website": "https://www.sedema.cdmx.gob.mx/museodehistorianatural",
+            "area": "Chapultepec",
+            "tags": ["natural history", "science"]
+        },
+        {
+            "name": "Museo Memoria y Tolerancia",
+            "category": "Museum",
+            "subcategories": ["History", "Human Rights"],
+            "location": "https://goo.gl/maps/stu678",
+            "website": "https://www.myt.org.mx",
+            "area": "Centro Histórico",
+            "tags": ["human rights", "history", "tolerance"]
+        },
+        {
+            "name": "Museo del Estanquillo",
+            "category": "Museum",
+            "subcategories": ["Popular Culture", "Art"],
+            "location": "https://goo.gl/maps/vwx901",
+            "website": "https://www.museodelestanquillo.cdmx.gob.mx",
+            "area": "Centro Histórico",
+            "tags": ["popular culture", "collections"]
+        },
+        {
+            "name": "Museo Nacional de San Carlos",
+            "category": "Museum",
+            "subcategories": ["Art"],
+            "location": "https://goo.gl/maps/yzabc2",
+            "website": "https://www.mnsancarlos.com",
+            "area": "Centro Histórico",
+            "tags": ["european art", "paintings"]
+        },
+        {
+            "name": "Museo de El Carmen",
+            "category": "Museum",
+            "subcategories": ["Religious Art", "History"],
+            "location": "https://goo.gl/maps/def345",
+            "website": "https://www.elcarmen.inah.gob.mx",
+            "area": "San Ángel",
+            "tags": ["religious art", "colonial history"]
+        },
+                {
+                    "name": "Museo Nacional de Arte Popular",
+                    "category": "Museum",
+                    "subcategories": ["Folk Art", "Traditional Crafts"],
+                    "location": "https://goo.gl/maps/reina123",
+                    "website": "https://www.map.cdmx.gob.mx",
+                    "area": "Centro Histórico",
+                    "tags": ["folk art", "crafts", "traditional"]
+                },
+                {
+                    "name": "Museo Universitario del Chopo",
+                    "category": "Museum",
+                    "subcategories": ["Contemporary Art", "Alternative Culture"],
+                    "location": "https://goo.gl/maps/chopo456",
+                    "website": "https://www.chopo.unam.mx",
+                    "area": "Santa María la Ribera",
+                    "tags": ["contemporary", "alternative", "UNAM"]
+                },
+                {
+                    "name": "Museo Universitario Arte Contemporáneo (MUAC)",
+                    "category": "Museum",
+                    "subcategories": ["Contemporary Art"],
+                    "location": "https://goo.gl/maps/muac789",
+                    "website": "https://muac.unam.mx",
+                    "area": "Ciudad Universitaria",
+                    "tags": ["contemporary art", "UNAM"]
+                },
+                {
+                    "name": "Museo de Arte Carrillo Gil",
+                    "category": "Museum",
+                    "subcategories": ["Modern Art", "Contemporary Art"],
+                    "location": "https://goo.gl/maps/carrillo012",
+                    "website": "https://www.museodeartecarrillogil.com",
+                    "area": "San Ángel",
+                    "tags": ["modern art", "contemporary"]
+                },
+                {
+                    "name": "Museo Mural Diego Rivera",
+                    "category": "Museum",
+                    "subcategories": ["Art", "Murals"],
+                    "location": "https://goo.gl/maps/mural345",
+                    "website": "https://www.museomuraldiegorivera.inba.gob.mx",
+                    "area": "Centro Histórico",
+                    "tags": ["murals", "diego rivera", "art"]
+                },
+                {
+                    "name": "Museo de Historia Natural",
+                    "category": "Museum",
+                    "subcategories": ["Natural History", "Science"],
+                    "location": "https://goo.gl/maps/natural678",
+                    "website": "https://www.sedema.cdmx.gob.mx/museodehistorianatural",
+                    "area": "Chapultepec",
+                    "tags": ["natural history", "science", "nature"]
+                },
+                {
+                    "name": "Museo del Juguete Antiguo México",
+                    "category": "Museum",
+                    "subcategories": ["Toys", "Popular Culture"],
+                    "location": "https://goo.gl/maps/juguete901",
+                    "website": "https://www.mujam.org",
+                    "area": "Doctores",
+                    "tags": ["toys", "vintage", "collection"]
+                },
+                {
+                    "name": "Museo de la Medicina Mexicana",
+                    "category": "Museum",
+                    "subcategories": ["Medicine", "History"],
+                    "location": "https://goo.gl/maps/medicina234",
+                    "website": "https://www.medicinaunam.mx/museo",
+                    "area": "Centro Histórico",
+                    "tags": ["medicine", "history", "science"]
+                },
+                {
+                    "name": "Museo de la Luz",
+                    "category": "Museum",
+                    "subcategories": ["Science", "Interactive"],
+                    "location": "https://goo.gl/maps/luz567",
+                    "website": "https://www.museodelaluz.unam.mx",
+                    "area": "Centro Histórico",
+                    "tags": ["science", "interactive", "UNAM"]
+                },
+                {
+                    "name": "Museo del Estanquillo",
+                    "category": "Museum",
+                    "subcategories": ["Popular Culture", "Art"],
+                    "location": "https://goo.gl/maps/estanquillo890",
+                    "website": "https://www.museodelestanquillo.cdmx.gob.mx",
+                    "area": "Centro Histórico",
+                    "tags": ["popular culture", "collections"]
+                },
+                {
+                    "name": "Museo Casa de León Trotsky",
+                    "category": "Museum",
+                    "subcategories": ["History", "House Museum"],
+                    "location": "https://goo.gl/maps/trotsky123",
+                    "website": "https://www.museocasadeleontrotsky.mx",
+                    "area": "Coyoacán",
+                    "tags": ["history", "trotsky", "house museum"]
+                },
+                {
+                    "name": "Museo de la Caricatura",
+                    "category": "Museum",
+                    "subcategories": ["Art", "Popular Culture"],
+                    "location": "https://goo.gl/maps/caricatura456",
+                    "website": "https://www.museodelacaricatura.mx",
+                    "area": "Centro Histórico",
+                    "tags": ["cartoons", "art", "humor"]
+                },
+                {
+                    "name": "Museo del Pulque y las Pulquerías",
+                    "category": "Museum",
+                    "subcategories": ["Culture", "Gastronomy"],
+                    "location": "https://goo.gl/maps/pulque789",
+                    "website": "https://www.museodelpulque.mx",
+                    "area": "Centro Histórico",
+                    "tags": ["pulque", "tradition", "culture"]
+                },
+                {
+                    "name": "Museo del Telégrafo",
+                    "category": "Museum",
+                    "subcategories": ["Technology", "Communications"],
+                    "location": "https://goo.gl/maps/telegrafo012",
+                    "website": "https://www.museotelegrafo.mx",
+                    "area": "Centro Histórico",
+                    "tags": ["technology", "communications", "history"]
+                },
+                {
+                    "name": "Museo de Cera de la Ciudad de México",
+                    "category": "Museum",
+                    "subcategories": ["Wax Museum", "Entertainment"],
+                    "location": "https://goo.gl/maps/cera345",
+                    "website": "https://www.museodecera.com.mx",
+                    "area": "Centro Histórico",
+                    "tags": ["wax figures", "entertainment"]
+                },
+              {
+                  "name": "Museo Nacional de Arte Moderno",
+                  "category": "Museum",
+                  "subcategories": ["Modern Art", "Contemporary Art"],
+                  "location": "https://goo.gl/maps/modern123",
+                  "website": "https://www.mam.inba.gob.mx",
+                  "area": "Chapultepec",
+                  "tags": ["modern art", "sculpture garden", "exhibitions"]
+              },
+              {
+                  "name": "MUCA Roma",
+                  "category": "Museum",
+                  "subcategories": ["Contemporary Art", "Experimental"],
+                  "location": "https://goo.gl/maps/muca456",
+                  "website": "https://www.mucaroma.unam.mx",
+                  "area": "Roma",
+                  "tags": ["contemporary", "experimental", "UNAM"]
+              },
+              {
+                  "name": "Museo Universitario de Ciencias y Artes",
+                  "category": "Museum",
+                  "subcategories": ["Science", "Art"],
+                  "location": "https://goo.gl/maps/muca789",
+                  "website": "https://www.muca.unam.mx",
+                  "area": "Ciudad Universitaria",
+                  "tags": ["science", "art", "UNAM"]
+              },
+              {
+                  "name": "Museo de Arte Popular",
+                  "category": "Museum",
+                  "subcategories": ["Folk Art", "Traditional Art"],
+                  "location": "https://goo.gl/maps/map012",
+                  "website": "https://www.map.cdmx.gob.mx",
+                  "area": "Centro Histórico",
+                  "tags": ["folk art", "crafts", "traditional"]
+              },
+              {
+                  "name": "Museo Nacional de Culturas Populares",
+                  "category": "Museum",
+                  "subcategories": ["Folk Art", "Culture"],
+                  "location": "https://goo.gl/maps/culturas345",
+                  "website": "https://www.culturaspopulareseindigenas.gob.mx",
+                  "area": "Coyoacán",
+                  "tags": ["folk art", "culture", "traditions"]
+              },
+              {
+                  "name": "Museo de la Ciudad de México",
+                  "category": "Museum",
+                  "subcategories": ["History", "City"],
+                  "location": "https://goo.gl/maps/ciudad678",
+                  "website": "https://www.cultura.cdmx.gob.mx/mcm",
+                  "area": "Centro Histórico",
+                  "tags": ["history", "city", "culture"]
+              },
+              {
+                  "name": "Museo del Juguete Antiguo México",
+                  "category": "Museum",
+                  "subcategories": ["Toys", "Culture"],
+                  "location": "https://goo.gl/maps/juguete901",
+                  "website": "https://www.mujam.org",
+                  "area": "Doctores",
+                  "tags": ["toys", "nostalgia", "collection"]
+              },
+              {
+                  "name": "Museo de Historia Natural",
+                  "category": "Museum",
+                  "subcategories": ["Science", "Natural History"],
+                  "location": "https://goo.gl/maps/natural234",
+                  "website": "https://www.sedema.cdmx.gob.mx",
+                  "area": "Chapultepec",
+                  "tags": ["science", "nature", "history"]
+              },
+              {
+                  "name": "Museo de la Medicina Mexicana",
+                  "category": "Museum",
+                  "subcategories": ["Medicine", "History"],
+                  "location": "https://goo.gl/maps/medicina567",
+                  "website": "https://www.medicinaunam.mx",
+                  "area": "Centro Histórico",
+                  "tags": ["medicine", "history", "science"]
+              },
+              {
+                  "name": "Museo del Telégrafo",
+                  "category": "Museum",
+                  "subcategories": ["Technology", "Communications"],
+                  "location": "https://goo.gl/maps/telegrafo890",
+                  "website": "https://www.telecomm.gob.mx",
+                  "area": "Centro Histórico",
+                  "tags": ["technology", "communications", "history"]
+              },
+              {
+                  "name": "Museo de Geología UNAM",
+                  "category": "Museum",
+                  "subcategories": ["Science", "Geology"],
+                  "location": "https://goo.gl/maps/geologia123",
+                  "website": "https://www.geologia.unam.mx",
+                  "area": "Santa María la Ribera",
+                  "tags": ["science", "geology", "UNAM"]
+              },
+              {
+                  "name": "Museo del Chocolate",
+                  "category": "Museum",
+                  "subcategories": ["Food", "Culture"],
+                  "location": "https://goo.gl/maps/chocolate456",
+                  "website": "https://www.mucho.org.mx",
+                  "area": "Juárez",
+                  "tags": ["chocolate", "food", "culture"]
+              },
+              {
+                  "name": "Museo del Objeto del Objeto (MODO)",
+                  "category": "Museum",
+                  "subcategories": ["Design", "Culture"],
+                  "location": "https://goo.gl/maps/modo789",
+                  "website": "https://www.elmodo.mx",
+                  "area": "Roma",
+                  "tags": ["design", "objects", "culture"]
+              },
+              {
+                  "name": "Museo de la Caricatura",
+                  "category": "Museum",
+                  "subcategories": ["Art", "Comics"],
+                  "location": "https://goo.gl/maps/caricatura012",
+                  "website": "https://www.museodelacaricatura.org.mx",
+                  "area": "Centro Histórico",
+                  "tags": ["cartoons", "art", "humor"]
+              },
+              {
+                  "name": "Museo de Arte Alvar y Carmen T. de Carrillo Gil",
+                  "category": "Museum",
+                  "subcategories": ["Contemporary Art"],
+                  "location": "https://goo.gl/maps/carrillo345",
+                  "website": "https://www.carrillo-gil.inba.gob.mx",
+                  "area": "San Ángel",
+                  "tags": ["contemporary art", "exhibitions"]
+              }
+,
+                      {
+                          "name": "Museo Nacional de las Intervenciones",
+                          "category": "Museum",
+                          "subcategories": ["History", "Military"],
+                          "location": "https://goo.gl/maps/intervenciones123",
+                          "website": "https://www.mni.inah.gob.mx",
+                          "area": "Churubusco",
+                          "tags": ["history", "military", "interventions"]
+                      },
+                      {
+                          "name": "MUCA Roma",
+                          "category": "Museum",
+                          "subcategories": ["Contemporary Art", "Experimental"],
+                          "location": "https://goo.gl/maps/mucaroma456",
+                          "website": "https://www.mucaroma.unam.mx",
+                          "area": "Roma",
+                          "tags": ["contemporary art", "experimental", "UNAM"]
+                      },
+                      {
+                          "name": "Museo Numismático Nacional",
+                          "category": "Museum",
+                          "subcategories": ["Currency", "History"],
+                          "location": "https://goo.gl/maps/numismatico789",
+                          "website": "https://www.cmm.gob.mx",
+                          "area": "Centro Histórico",
+                          "tags": ["coins", "currency", "history"]
+                      },
+                      {
+                          "name": "Museo de los Ferrocarrileros",
+                          "category": "Museum",
+                          "subcategories": ["Transportation", "History"],
+                          "location": "https://goo.gl/maps/ferrocarrileros012",
+                          "website": "https://www.cultura.cdmx.gob.mx/ferrocarrileros",
+                          "area": "Norte",
+                          "tags": ["trains", "railway", "history"]
+                      },
+                      {
+                          "name": "Museo de la Basílica de Guadalupe",
+                          "category": "Museum",
+                          "subcategories": ["Religious", "Art"],
+                          "location": "https://goo.gl/maps/basilica345",
+                          "website": "https://www.virgendeguadalupe.org.mx",
+                          "area": "Villa de Guadalupe",
+                          "tags": ["religious", "art", "history"]
+                      },
+                      {
+                          "name": "Museo de la Charrería",
+                          "category": "Museum",
+                          "subcategories": ["Culture", "Traditions"],
+                          "location": "https://goo.gl/maps/charreria678",
+                          "website": "https://www.museodelacharreria.mx",
+                          "area": "Centro Histórico",
+                          "tags": ["charrería", "traditions", "culture"]
+                      },
+                      {
+                          "name": "Museo de Arte Tridimensional",
+                          "category": "Museum",
+                          "subcategories": ["Art", "Interactive"],
+                          "location": "https://goo.gl/maps/3dart901",
+                          "website": "https://www.3dart.mx",
+                          "area": "Roma",
+                          "tags": ["3D art", "interactive", "contemporary"]
+                      },
+                      {
+                          "name": "Museo del Ex Convento de Culhuacán",
+                          "category": "Museum",
+                          "subcategories": ["History", "Religious"],
+                          "location": "https://goo.gl/maps/culhuacan234",
+                          "website": "https://www.culhuacan.inah.gob.mx",
+                          "area": "Culhuacán",
+                          "tags": ["colonial", "religious", "history"]
+                      },
+                      {
+                          "name": "Museo de Sitio Tlatelolco",
+                          "category": "Museum",
+                          "subcategories": ["History", "Archaeology"],
+                          "location": "https://goo.gl/maps/tlatelolco567",
+                          "website": "https://www.tlatelolco.unam.mx",
+                          "area": "Tlatelolco",
+                          "tags": ["archaeology", "history", "UNAM"]
+                      },
+                      {
+                          "name": "Museo de la Cancillería",
+                          "category": "Museum",
+                          "subcategories": ["Art", "Diplomacy"],
+                          "location": "https://goo.gl/maps/cancilleria890",
+                          "website": "https://www.sre.gob.mx/museo",
+                          "area": "Centro Histórico",
+                          "tags": ["diplomacy", "art", "international"]
+                      },
+                      {
+                          "name": "Museo del Retrato Hablado",
+                          "category": "Museum",
+                          "subcategories": ["Art", "Forensics"],
+                          "location": "https://goo.gl/maps/retrato123",
+                          "website": "https://www.museodelretrato.mx",
+                          "area": "Centro Histórico",
+                          "tags": ["portraits", "forensics", "art"]
+                      },
+                      {
+                          "name": "Museo de las Constituciones",
+                          "category": "Museum",
+                          "subcategories": ["History", "Law"],
+                          "location": "https://goo.gl/maps/constituciones456",
+                          "website": "https://www.museodelasconstituciones.unam.mx",
+                          "area": "Centro Histórico",
+                          "tags": ["law", "history", "UNAM"]
+                      },
+                      {
+                          "name": "Museo de la Autonomía Universitaria",
+                          "category": "Museum",
+                          "subcategories": ["Education", "History"],
+                          "location": "https://goo.gl/maps/autonomia789",
+                          "website": "https://www.unam.mx/museo-autonomia",
+                          "area": "Centro Histórico",
+                          "tags": ["UNAM", "education", "history"]
+                      },
+                      {
+                          "name": "Museo Casa de la Bola",
+                          "category": "Museum",
+                          "subcategories": ["History", "Architecture"],
+                          "location": "https://goo.gl/maps/bola012",
+                          "website": "https://www.casadelabola.mx",
+                          "area": "Tacubaya",
+                          "tags": ["architecture", "history", "decorative arts"]
+                      },
+                      {
+                          "name": "Museo del Centenario del Ejército Mexicano",
+                          "category": "Museum",
+                          "subcategories": ["Military", "History"],
+                          "location": "https://goo.gl/maps/ejercito345",
+                          "website": "https://www.gob.mx/sedena/museo",
+                          "area": "Lomas de Sotelo",
+                          "tags": ["military", "history", "army"]
+                      },
+        {
+            "name": "Museo Kaluz",
+            "category": "Museum",
+            "subcategories": ["Art", "Contemporary"],
+            "location": "https://goo.gl/maps/kaluz123",
+            "website": "https://www.museokaluz.org",
+            "area": "Centro Histórico",
+            "tags": ["private collection", "temporary exhibits"]
+        },
+        {
+            "name": "Museo de la Luz",
+            "category": "Museum",
+            "subcategories": ["Science", "Light"],
+            "location": "https://goo.gl/maps/luz456",
+            "website": "https://www.museodelaluz.unam.mx",
+            "area": "Centro Histórico",
+            "tags": ["science", "light", "interactive"]
+        },
+        {
+            "name": "Museo de Arte Moderno",
+            "category": "Museum",
+            "subcategories": ["Modern Art"],
+            "location": "https://goo.gl/maps/modern678",
+            "website": "https://www.mam.inba.gob.mx",
+            "area": "Chapultepec",
+            "tags": ["modern art", "sculpture garden"]
+        },
+        {
+            "name": "Museo del Chocolate Nestlé",
+            "category": "Museum",
+            "subcategories": ["Food", "Culinary"],
+            "location": "https://goo.gl/maps/chocolate901",
+            "website": "",
+            "area": "",
+            "tags": ["chocolate", "culinary", "food"]
+        },
+        {
+            "name": "Museo de la Ciudad de México",
+            "category": "Museum",
+            "subcategories": ["History", "Culture"],
+            "location": "https://goo.gl/maps/ciudad234",
+            "website": "",
+            "area": "",
+            "tags": ["city history", "culture"]
+        },
+        {
+            "name": "Museo de la Revolución",
+            "category": "Museum",
+            "subcategories": ["History"],
+            "location": "",
+            "website": "",
+            "area": "",
+            "tags": ["revolution",  ]
+        },
+        {
+            "name":  "Museo del Ferrocarril de México",
+             "category":"Museum",
+             "subcategories":["Transportation","History"],
+             "location":"https://goo.gl/maps/ferrocarril123",
+             "website":"http://www.museoferrocarril.com.mx/",
+             "area":"Centro Histórico",
+             "tags":["trains","railway","history"]
+        },
+        {
+             "name":"Museo de Historia Natural y Cultura Ambiental",
+             "category":"Museum",
+             "subcategories":["Natural History","Science"],
+             "location":"https://goo.gl/maps/historia456",
+             "website":"http://www.museohistorianatural.com.mx/",
+             "area":"Chapultepec",
+             "tags":["natural history","science","environment"]
+        },
+        {
+             "name":"Museo del Chocolate Nestlé México ",
+             "category":"Museum",
+             "subcategories":["Food","Culinary"],
+             "location":"https://goo.gl/maps/chocolate789",
+             "website":"",
+             "area":"Polanco ",
+             "tags":["chocolate","culinary","food"]
+    },
+    {
+        "name":"Museo de la Tortura ",
+        "category":"Museum ",
+        "subcategories":["History ","Crime"],
+        "location":"https://goo.gl/maps/tortura123 ",
+        "website":"",
+        "area":"Centro Histórico ",
+        "tags":["torture","history","crime"]
+    },
+    {
+        "name":"Museo del Tiempo Tlalpan ",
+        "category":"Museum ",
+        "subcategories":["History ","Time"],
+        "location":"https://goo.gl/maps/tiempo456 ",
+        "website":"",
+        "area":"Tlalpan ",
+        "tags":["time","history","culture"]
+    },
+    {
+        “name”: “Museo de la Mujer”,
+        “category”: “Museum”,
+        “subcategories”: [“Women’s History”, “Culture”],
+        “location”: “https://goo.gl/maps/mujer789”,
+        “website”: “http://www.museodelamujer.org”,
+        “area”: “Centro Histórico”,
+        “tags”: [“women”, “history”, “culture”]
+    },
+    {
+        “name”: “Museo de la Acuarela”,
+        “category”: “Museum”,
+        “subcategories”: [“Art”, “Watercolor”],
+        “location”: “https://goo.gl/maps/acuarela012”,
+        “website”: “http://www.museodeacuarela.com”,
+        “area”: “Coyoacán”,
+        “tags”: [“watercolor”, “art”, “exhibitions”]
+    },
+    {
+        “name”: “Museo del Palacio de Bellas Artes”,
+        “category”: “Museum”,
+        “subcategories”: [“Art”, “Architecture”],
+        “location”: “https://goo.gl/maps/bellasartes345”,
+        “website”: “”,
+        “area”: “”,
+        “tags”: [“architecture”, “art”, “cultural heritage”]
+    },
+    {
+        ”name”: ”Museo Nacional de las Culturas del Mundo INAH”,
+        ”category”: ”Museum”,
+        ”subcategories”: [“Culture”, ”Anthropology”],
+        ”location”: ”https://goo.gl/maps/culturas456”,
+        ”website”: ”http://www.culturasdelmundo.inah.gob.mx”,
+        ”area”: ”Centro Histórico”,
+        ”tags”: [“culture”, ”anthropology”, ”diversity”]
+    }
     ]
 }
