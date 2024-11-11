@@ -88,22 +88,20 @@ function displayPlaces(places) {
 
 function getCategoryIcon(category) {
     const icons = {
-        'Concert Venue': 'fas fa-music',
         'Movie Theater': 'fas fa-film',
-        'Theater': 'fas fa-theater-masks',
-        'Sports Arena': 'fas fa-futbol',
+        'Concert Venue': 'fas fa-music',
         'Museum': 'fas fa-landmark',
-        'Park': 'fas fa-tree',
+        'Sports Arena': 'fas fa-futbol',
+        'Theater': 'fas fa-theater-masks',
         'Cultural Center': 'fas fa-palette',
-        'Club': 'fas fa-glass-cheers',
-        'Event Space': 'fas fa-calendar-alt'
+        'Park': 'fas fa-tree'
     };
     return icons[category] || 'fas fa-map-marker-alt';
 }
 
 function loadCategories() {
     const eventCategories = ['Conciertos', 'Cine', 'Teatro', 'Deportes', 'Exposiciones', 'Charlas', 'Clases', 'Tours', 'Música', 'Festival', 'Cultura', 'Literatura', 'Fútbol', 'Arte', 'Tecnología', 'Ciencia', 'Gastronomía', 'Historia', 'Jazz', 'Entretenimiento', 'Béisbol', 'Música Electrónica', 'Parques', 'Naturaleza', 'Recreación', 'Comedia', 'Clubes', 'Fiesta'];
-    const placeCategories = ['Concert Venue', 'Movie Theater', 'Theater', 'Sports Arena', 'Museum', 'Park', 'Cultural Center', 'Club', 'Event Space'];
+    const placeCategories = ['Movie Theater', 'Concert Venue', 'Museum', 'Sports Arena', 'Theater', 'Cultural Center', 'Park'];
 
     populateCategories('event-category', eventCategories);
     populateCategories('places-category', placeCategories);
@@ -111,6 +109,7 @@ function loadCategories() {
 
 function populateCategories(selectId, categories) {
     const categorySelect = document.getElementById(selectId);
+    categorySelect.innerHTML = '<option value="">Todas las categorías</option>';
     categories.forEach(category => {
         const option = document.createElement('option');
         option.value = category.toLowerCase();
