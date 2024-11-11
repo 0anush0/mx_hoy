@@ -1,92 +1,107 @@
-let events = [];
-let venues = [];
+document.addEventListener('DOMContentLoaded', function() {
+    // Load events
+    loadEvents();
+
+    // Load weather
+    loadWeather();
+
+    // Load AI recommendations
+    loadRecommendations();
+
+    // Handle email form submission
+    document.getElementById('email-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        submitEmail(email);
+    });
+});
 
 async function loadEvents() {
+    // Fetch events from your backend API
     try {
-        const response = await fetch('events.json');
-        const data = await response.json();
-        events = data.concerts;
-        venues = [...new Set(events.map(event => event.venue))];
-        populateEvents();
-        populateVenues();
+        const response = await fetch('/api/events');
+        const events = await response.json();
+        displayEvents(events);
     } catch (error) {
         console.error('Error loading events:', error);
     }
 }
 
-function populateEvents() {
-    const eventsContainer = document.getElementById('events-container');
-    eventsContainer.innerHTML = '';
+function displayEvents(events) {
+    const destacadosSection = document.getElementById('destacados');
+    // Clear existing content
+    destacadosSection.innerHTML = '<h2>Eventos Destacados</h2>';
+
+    // Display events
     events.forEach(event => {
-        const eventElement = createEventElement(event);
-        eventsContainer.appendChild(eventElement);
+        const eventElement = document.createElement('div');
+        eventElement.classList.add('event');
+        eventElement.innerHTML = `
+            <h3>${event.name}</h3>
+            <p>${event.date} - ${event.location}</p>
+            <p>${event.description}</p>
+        `;
+        destacadosSection.appendChild(eventElement);
     });
 }
 
-function populateVenues() {
-    const venuesList = document.getElementById('venues-list');
-    venuesList.innerHTML = '';
-    venues.forEach(venue => {
-        const li = document.createElement('li');
-        li.textContent = venue;
-        venuesList.appendChild(li);
-    });
+async function loadWeather() {
+    // Fetch weather data from a weather API
+    try {
+        const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Mexico+City&appid=YOUR_API_KEY&units=metric');
+        const weatherData = await response.json();
+        displayWeather(weatherData);
+    } catch (error) {
+        console.error('Error loading weather:', error);
+    }
 }
 
-function createEventElement(event) {
-    const eventElement = document.createElement('div');
-    eventElement.className = 'event';
-    eventElement.innerHTML = `
-        <h2>${event.name}</h2>
-        <p class="event-info">${event.date} a las ${event.time}</p>
-        <p class="event-venue">${event.venue}</p>
-        <p>${event.description}</p>
+function displayWeather(weatherData) {
+    const climaSection = document.getElementById('clima');
+    climaSection.innerHTML = `
+        <h2>Clima en CDMX</h2>
+        <p>Temperatura: ${weatherData.main.temp}°C</p>
+        <p>Condición: ${weatherData.weather[0].description}</p>
     `;
-    return eventElement;
 }
 
-function setupTabs() {
-    const tabs = document.querySelectorAll('menu[role="tablist"] a');
-    const tabContents = document.querySelectorAll('.tab-content');
+async function loadRecommendations() {
+    // In the future, this will fetch AI-generated recommendations
+    // For now, we'll use placeholder data
+    const recommendations = [
+        "Concierto de rock en el Foro Sol",
+        "Exposición de arte contemporáneo en el Museo Jumex",
+        "Partido de fútbol en el Estadio Azteca"
+    ];
+    displayRecommendations(recommendations);
+}
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', (e) => {
-            e.preventDefault();
-            tabContents.forEach(content => content.style.display = 'none');
-            tabs.forEach(t => t.classList.remove('active'));
-
-            const target = document.querySelector(tab.getAttribute('href'));
-            target.style.display = 'block';
-            tab.classList.add('active');
-        });
+function displayRecommendations(recommendations) {
+    const recomendacionesSection = document.getElementById('recomendaciones');
+    recomendacionesSection.innerHTML = '<h2>Recomendaciones AI</h2>';
+    const list = document.createElement('ul');
+    recommendations.forEach(rec => {
+        const item = document.createElement('li');
+        item.textContent = rec;
+        list.appendChild(item);
     });
-
-    // Activate the first tab by default
-    tabs[0].click();
+    recomendacionesSection.appendChild(list);
 }
 
-function setupSearch() {
-    const searchInput = document.getElementById('search-input');
-    const searchButton = document.getElementById('search-button');
-    const searchResults = document.getElementById('search-results');
-
-    searchButton.addEventListener('click', () => {
-        const query = searchInput.value.toLowerCase();
-        const filteredEvents = events.filter(event =>
-            event.name.toLowerCase().includes(query) ||
-            event.venue.toLowerCase().includes(query)
-        );
-
-        searchResults.innerHTML = '';
-        filteredEvents.forEach(event => {
-            const eventElement = createEventElement(event);
-            searchResults.appendChild(eventElement);
+async function submitEmail(email) {
+    // Send email to backend for giveaway entry
+    try {
+        const response = await fetch('/api/giveaway', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email }),
         });
-    });
+        const result = await response.json();
+        alert(result.message);
+    } catch (error) {
+        console.error('Error submitting email:', error);
+        alert('Hubo un error al enviar tu correo. Por favor, intenta de nuevo.');
+    }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    loadEvents();
-    setupTabs();
-    setupSearch();
-});

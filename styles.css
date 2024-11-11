@@ -1,219 +1,58 @@
-/* Hip-hop/Reggaeton CDMX Themed Styles */
-body {
-    background-color: #141414; /* Dark background for urban feel */
-    color: #ffffff; /* White text for contrast */
-    font-family: 'Open Sans', 'Arial', sans-serif;
-    line-height: 1.6;
+/* Basic reset and responsive design */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
 }
 
-.window {
-    width: 90vw;
-    max-width: 1200px;
-    height: 90vh;
-    background-color: #1a1a1a; /* Dark grey for window */
-    border-radius: 10px; /* Rounded edges */
-    padding: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.title-bar {
-    background-color: #ff4081; /* Bold pink color */
-    color: #ffffff;
-    font-size: 16px;
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px 10px 0 0;
-}
-
-.window-body {
-    font-size: 16px;
-    line-height: 1.5;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.tab-content {
-    display: none;
-    padding: 20px;
-    background-color: #252525; /* Dark content area */
-    border-radius: 8px;
-    margin-top: 10px;
-    flex-grow: 1;
-    overflow-y: auto;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-.tab-content h1 {
-    font-size: 22px;
-    color: #ff4081;
-    margin-top: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.scrollable-content {
-    overflow-y: auto;
-    flex-grow: 1;
-}
-
-menu[role="tablist"] {
-    padding-left: 0;
-    margin: 0;
-    display: flex;
-    background-color: #ff4081; /* Tab background color */
-    border-radius: 10px 10px 0 0;
-}
-
-menu[role="tablist"] li {
-    list-style: none;
-    margin-right: 10px;
-}
-
-menu[role="tablist"] a {
-    display: inline-block;
+nav ul li a {
     text-decoration: none;
-    color: #ffffff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px 5px 0 0;
-    transition: background-color 0.3s;
-    text-transform: uppercase;
-    font-weight: bold;
+    color: #333;
 }
 
-menu[role="tablist"] a:hover,
-menu[role="tablist"] a.active {
-    background-color: #e91e63; /* Darker pink for active state */
+main {
+    padding: 2rem;
 }
 
-.event {
-    background-color: #252525; /* Dark event background */
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 3px solid transparent; /* Transparent border initially */
-    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
+section {
+    margin-bottom: 2rem;
 }
 
-.event:hover {
-    transform: scale(1.02);
-    border-color: #ff4081; /* Pink border on hover */
-    box-shadow: 0 0 15px rgba(255, 64, 129, 0.5); /* Glow effect */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
 }
 
-.event:hover::before {
-    content: '';
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    right: -3px;
-    bottom: -3px;
-    background: linear-gradient(45deg, #ff4081, #e91e63, #ff4081, #e91e63);
-    z-index: -1;
-    filter: blur(5px);
-    animation: glowing 1.5s linear infinite;
+input, button {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
 }
 
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-}
-
-.event h2 {
-    margin-top: 0;
-    font-size: 18px;
-    color: #ff4081;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-}
-
-.event:hover h2 {
-    color: #ffffff; /* Change to white on hover for better contrast */
-}
-
-.event-info,
-.event-venue {
-    font-size: 14px;
-    margin-bottom: 8px;
-    color: #ffffff;
-}
-
-#search-input {
-    width: 70%;
-    padding: 10px;
-    margin-right: 10px;
-    border: 2px solid #ff4081; /* Pink border */
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-}
-
-#search-button {
-    padding: 10px 15px;
-    background-color: #ff4081;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-#search-button:hover {
-    background-color: #e91e63;
-}
-
-/* Add graffiti-inspired background */
-.window::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
     bottom: 0;
-    background-image: url('graffiti-background.jpg'); /* Add a graffiti background image */
-    background-size: cover;
-    opacity: 0.1;
-    z-index: -1;
-    border-radius: 10px;
+    width: 100%;
 }
 
-/* Add neon glow effect to headings */
-h1, h2 {
-    text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081;
-}
-
-/* Scrollbar styling */
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: #1a1a1a;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #ff4081;
-    border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #e91e63;
-}
+/* Add more styles as needed */

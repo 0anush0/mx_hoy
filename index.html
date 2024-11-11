@@ -3,137 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dónde está la fiesta wey</title>
+    <title>CDMX Hoy - Eventos en la Ciudad de México</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="window">
-        <div class="title-bar">
-            <div class="title-bar-text">dónde está la fiesta wey</div>
-            <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize"></button>
-                <button aria-label="Close"></button>
-            </div>
-        </div>
-        <div class="window-body">
-            <menu role="tablist">
-                <li role="tab"><a href="#upcoming">Próximos</a></li>
-                <li role="tab"><a href="#venues">Lugares</a></li>
-                <li role="tab"><a href="#search">Buscar</a></li>
-                <li role="tab"><a href="#about">Acerca de</a></li>
-            </menu>
-            <div class="tab-content" id="upcoming">
-                <h1>Próximos Eventos</h1>
-                <div id="events-container" class="scrollable-content"></div>
-            </div>
-            <div class="tab-content" id="venues">
-                <h1>Lugares en CDMX</h1>
-                <div class="scrollable-content">
-                    <section>
-                        <h2>Venues de Conciertos</h2>
-                        <ul>
-                            <li>Auditorio Nacional</li>
-                            <li>Foro Sol</li>
-                            <li>Palacio de los Deportes</li>
-                            <li>Teatro Metropólitan</li>
-                            <li>Pepsi Center WTC</li>
-                            <li>Plaza Condesa</li>
-                            <li>Lunario</li>
-                            <li>Arena Ciudad de México</li>
-                            <li>El Plaza Condesa</li>
-                            <li>Sala Nezahualcóyotl</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Museos</h2>
-                        <ul>
-                            <li>Museo Nacional de Antropología</li>
-                            <li>Museo Frida Kahlo (Casa Azul)</li>
-                            <li>Museo Soumaya</li>
-                            <li>Museo Jumex</li>
-                            <li>Palacio de Bellas Artes</li>
-                            <li>Museo Nacional de Arte (MUNAL)</li>
-                            <li>Museo Universitario Arte Contemporáneo (MUAC)</li>
-                            <li>Museo de Arte Moderno</li>
-                            <li>Museo Tamayo Arte Contemporáneo</li>
-                            <li>Museo Dolores Olmedo</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Sitios Históricos</h2>
-                        <ul>
-                            <li>Templo Mayor</li>
-                            <li>Castillo de Chapultepec</li>
-                            <li>Palacio Nacional</li>
-                            <li>Catedral Metropolitana</li>
-                            <li>Plaza de las Tres Culturas</li>
-                            <li>Basílica de Guadalupe</li>
-                            <li>Casa de los Azulejos</li>
-                            <li>Palacio de Correos</li>
-                            <li>Monumento a la Revolución</li>
-                            <li>Antiguo Colegio de San Ildefonso</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Parques y Espacios Verdes</h2>
-                        <ul>
-                            <li>Bosque de Chapultepec</li>
-                            <li>Parque México</li>
-                            <li>Parque España</li>
-                            <li>Alameda Central</li>
-                            <li>Jardín Botánico del Bosque de Chapultepec</li>
-                            <li>Viveros de Coyoacán</li>
-                            <li>Parque Bicentenario</li>
-                            <li>Parque Lincoln</li>
-                            <li>Jardín Centenario (Coyoacán)</li>
-                            <li>Parque Hundido</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Equipos Deportivos</h2>
-                        <h3>Fútbol</h3>
-                        <ul>
-                            <li>Club América (Estadio Azteca)</li>
-                            <li>Cruz Azul (Estadio Azteca)</li>
-                            <li>Pumas UNAM (Estadio Olímpico Universitario)</li>
-                            <li>Club Universidad Nacional</li>
-                        </ul>
-                        <h3>Béisbol</h3>
-                        <ul>
-                            <li>Diablos Rojos del México (Estadio Alfredo Harp Helú)</li>
-                        </ul>
-                        <h3>Baloncesto</h3>
-                        <ul>
-                            <li>Capitanes de Ciudad de México (Gimnasio Juan de la Barrera)</li>
-                        </ul>
-                        <h3>Fútbol Americano</h3>
-                        <ul>
-                            <li>Mayas CDMX (Liga de Fútbol Americano Profesional)</li>
-                        </ul>
-                        <h3>Rugby</h3>
-                        <ul>
-                            <li>Wallabies Rugby Football Club</li>
-                        </ul>
-                        <h3>Hockey sobre Hielo</h3>
-                        <ul>
-                            <li>Mayan Astronomers</li>
-                        </ul>
-                    </section>
-                </div>
-            </div>
-            <div class="tab-content" id="search">
-                <h1>Buscar Eventos</h1>
-                <input type="text" id="search-input" placeholder="Buscar por nombre o lugar">
-                <button id="search-button">Buscar</button>
-                <div id="search-results" class="scrollable-content"></div>
-            </div>
-            <div class="tab-content" id="about">
-                <h1>Acerca de CDMX Events</h1>
-                <p>¡Tu guía retro para los eventos más candentes en la Ciudad de México!</p>
-            </div>
-        </div>
-    </div>
+    <header>
+        <h1>CDMX Hoy</h1>
+        <nav>
+            <ul>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#conciertos">Conciertos</a></li>
+                <li><a href="#fiestas">Fiestas</a></li>
+                <li><a href="#deportes">Deportes</a></li>
+                <li><a href="#cultura">Cultura</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="destacados">
+            <h2>Eventos Destacados</h2>
+            <!-- Eventos destacados se cargarán dinámicamente aquí -->
+        </section>
+
+        <section id="clima">
+            <h2>Clima en CDMX</h2>
+            <!-- Información del clima se cargará dinámicamente aquí -->
+        </section>
+
+        <section id="recomendaciones">
+            <h2>Recomendaciones AI</h2>
+            <!-- Recomendaciones de AI se cargarán dinámicamente aquí -->
+        </section>
+
+        <section id="sorteo">
+            <h2>¡Gana Boletos Gratis!</h2>
+            <form id="email-form">
+                <input type="email" id="email" required placeholder="Tu correo electrónico">
+                <button type="submit">Participar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CDMX Hoy. Todos los derechos reservados.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
