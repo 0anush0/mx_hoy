@@ -1,49 +1,43 @@
-@import url('https://unpkg.com/98.css');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-
 body {
-    background-color: #006847; /* Mexican flag green */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    background-color: #141414; /* Dark background for urban feel */
+    color: #ffffff; /* White text for contrast */
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    line-height: 1.6;
     margin: 0;
-    font-family: 'Open Sans', 'MS Sans Serif', sans-serif;
+    padding: 20px;
 }
 
 .window {
     width: 90vw;
     max-width: 1200px;
-    height: 90vh;
-    max-height: 800px;
-    background-color: #ffffff; /* White background */
-    border: 2px solid #9E2A2B; /* Dark red border */
-    display: flex;
-    flex-direction: column;
+    height: auto;
+    background-color: #1a1a1a; /* Dark grey for window */
+    border-radius: 10px; /* Rounded edges */
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .title-bar {
-    background-color: #9E2A2B; /* Dark red title bar */
+    background-color: #ff4081; /* Bold pink color */
     color: #ffffff;
-    font-size: 14px;
-    padding: 3px 2px 3px 3px;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
 }
 
 .window-body {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
     overflow: hidden;
 }
 
 .tab-content {
     display: none;
-    padding: 10px;
-    background-color: #ffffff; /* White content area */
-    flex-grow: 1;
-    overflow-y: auto;
+    padding: 20px;
+    background-color: #252525; /* Dark content area */
+    border-radius: 8px;
+    margin-top: 10px;
 }
 
 .tab-content.active {
@@ -51,114 +45,117 @@ body {
 }
 
 .tab-content h1 {
-    font-size: 18px;
-    color: #9E2A2B;
+    font-size: 22px;
+    color: #ff4081;
     margin-top: 0;
-    margin-bottom: 15px;
-    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .scrollable-content {
+    max-height: 400px;
     overflow-y: auto;
-    flex-grow: 1;
+    margin-top: 10px;
 }
 
 menu[role="tablist"] {
     padding-left: 0;
     margin: 0;
     display: flex;
-    background-color: #006847; /* Mexican flag green */
+    background-color: #ff4081; /* Tab background color */
+    border-radius: 10px 10px 0 0;
 }
 
 menu[role="tablist"] li {
     list-style: none;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 menu[role="tablist"] a {
     display: inline-block;
     text-decoration: none;
     color: #ffffff;
-    background-color: #006847; /* Mexican flag green */
-    padding: 5px 10px;
-    border: 2px outset #ffffff;
-    font-size: 14px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-menu[role="tablist"] a:focus {
-    outline: 1px dotted #ffffff;
-}
-
+menu[role="tablist"] a:hover,
 menu[role="tablist"] a.active {
-    background-color: #ffffff;
-    color: #006847;
+    background-color: #e91e63; /* Darker pink for active state */
 }
 
 .event {
-    background-color: #f0f0f0; /* Light gray for contrast */
-    border: 2px solid #006847; /* Green border */
-    padding: 12px;
+    background-color: #252525; /* Dark event background */
+    border-radius: 5px;
+    padding: 15px;
     margin-bottom: 15px;
-    border-radius: 4px;
+    border: 3px solid #ff4081; /* Pink border for events */
+    transition: transform 0.3s ease;
+}
+
+.event:hover {
+    transform: scale(1.02);
 }
 
 .event h2 {
     margin-top: 0;
-    margin-bottom: 8px;
-    font-size: 16px;
-    color: #9E2A2B; /* Dark red for headers */
-    font-weight: 600;
+    font-size: 18px;
+    color: #ff4081;
+    text-transform: uppercase;
 }
 
-.event-info {
+.event-info,
+.event-venue {
     font-size: 14px;
-    color: #006847; /* Green for info text */
     margin-bottom: 8px;
-}
-
-/* Scrollbar styling */
-::-webkit-scrollbar {
-    width: 16px;
-}
-
-::-webkit-scrollbar-track {
-    background: #ffffff;
-    border-left: 1px solid #808080;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #c0c0c0;
-    border: 1px outset #ffffff;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #a0a0a0;
-}
-
-::-webkit-scrollbar-button {
-    background: #c0c0c0;
-    border: 1px outset #ffffff;
-}
-
-::-webkit-scrollbar-button:hover {
-    background: #a0a0a0;
+    color: #ffffff;
 }
 
 #search-input {
     width: 70%;
-    padding: 5px;
+    padding: 10px;
     margin-right: 10px;
+    border: 2px solid #ff4081; /* Pink border */
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
 }
 
 #search-button {
-    padding: 5px 10px;
-}
-
-#search-results {
-    margin-top: 15px;
-}
-
-.event-venue {
+    padding: 10px 15px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
     font-weight: bold;
-    color: #006847;
+}
+
+#search-button:hover {
+    background-color: #e91e63;
+}
+
+/* Add graffiti-inspired background */
+.window::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('graffiti-background.jpg'); /* Add a graffiti background image */
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+/* Add neon glow effect to headings */
+h1, h2 {
+    text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081;
 }
