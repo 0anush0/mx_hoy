@@ -52,15 +52,16 @@ function setupTabs() {
     tabs.forEach(tab => {
         tab.addEventListener('click', (e) => {
             e.preventDefault();
-            tabContents.forEach(content => content.classList.remove('active'));
+            tabContents.forEach(content => content.style.display = 'none');
             tabs.forEach(t => t.classList.remove('active'));
 
             const target = document.querySelector(tab.getAttribute('href'));
-            target.classList.add('active');
+            target.style.display = 'block';
             tab.classList.add('active');
         });
     });
 
+    // Activate the first tab by default
     tabs[0].click();
 }
 
