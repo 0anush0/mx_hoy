@@ -6,8 +6,8 @@
 }
 
 body {
-    font-family: 'Courier Prime', monospace;
-    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
     color: #333;
     line-height: 1.6;
 }
@@ -22,15 +22,16 @@ body {
 header {
     text-align: center;
     padding: 40px 0;
-    background-color: #ff6b6b;
+    background-color: #ff4757;
     margin-bottom: 30px;
 }
 
 h1 {
-    font-family: 'Futura', sans-serif;
-    font-size: 3em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5em;
     color: #ffffff;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .tagline {
@@ -44,7 +45,7 @@ nav {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
-    background-color: #4ecdc4;
+    background-color: #2f3542;
     padding: 10px 0;
 }
 
@@ -57,13 +58,13 @@ nav {
     font-size: 1em;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'Futura', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
 }
 
 .nav-button:hover, .nav-button.active {
-    background-color: #ffffff;
-    color: #4ecdc4;
+    background-color: #ff4757;
+    color: #ffffff;
 }
 
 /* Main content styles */
@@ -75,50 +76,50 @@ main {
 }
 
 h2 {
-    color: #ff6b6b;
+    color: #ff4757;
     margin-bottom: 20px;
-    font-family: 'Futura', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
 }
 
-#event-filters {
+#event-filters, #places-filters {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
-#event-search, #event-category {
+#event-search, #event-category, #places-search, #places-category {
     padding: 10px;
     font-size: 1em;
-    border: 2px solid #4ecdc4;
+    border: 2px solid #2f3542;
     background-color: #ffffff;
     color: #333;
 }
 
-#event-search {
+#event-search, #places-search {
     width: 60%;
 }
 
-#event-category {
+#event-category, #places-category {
     width: 35%;
 }
 
-.event-grid {
+.event-grid, .places-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.event, .venue {
+.event, .place {
     background-color: #ffffff;
-    border: 2px solid #ff6b6b;
+    border: 2px solid #ff4757;
     padding: 20px;
     transition: transform 0.3s ease;
 }
 
-.event:hover, .venue:hover {
+.event:hover, .place:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(255,107,107,0.3);
+    box-shadow: 0 5px 15px rgba(255,71,87,0.3);
 }
 
 .event-tags {
@@ -127,7 +128,7 @@ h2 {
 
 .event-tag {
     display: inline-block;
-    background-color: #4ecdc4;
+    background-color: #2f3542;
     color: #ffffff;
     padding: 2px 5px;
     margin-right: 5px;
@@ -136,23 +137,14 @@ h2 {
 }
 
 h3 {
-    color: #ff6b6b;
+    color: #ff4757;
     margin-bottom: 10px;
-    font-family: 'Futura', sans-serif;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    margin-bottom: 5px;
-    color: #333;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Email signup styles */
 #email-signup {
-    background-color: #ff6b6b;
+    background-color: #ff4757;
     padding: 30px;
     text-align: center;
     margin-bottom: 30px;
@@ -178,64 +170,40 @@ li {
 }
 
 #email-form button {
-    background-color: #4ecdc4;
+    background-color: #2f3542;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-family: 'Futura', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
 }
 
 #email-form button:hover {
-    background-color: #45b7ac;
+    background-color: #1e2532;
 }
 
 /* Weather widget styles */
 #weather-widget {
-    background-color: #4ecdc4;
+    background-color: #2f3542;
     padding: 20px;
     text-align: center;
     color: #ffffff;
 }
 
-/* Places styles */
-#places-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.venue {
-    margin-bottom: 20px;
-}
-
-.venue p {
-    margin-bottom: 5px;
-}
-
-.venue a {
-    color: #4ecdc4;
-    text-decoration: none;
-}
-
-.venue a:hover {
-    text-decoration: underline;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .event-grid, #places-container {
+    .event-grid, .places-grid {
         grid-template-columns: 1fr;
     }
 
-    #event-filters {
+    #event-filters, #places-filters {
         flex-direction: column;
     }
 
-    #event-search, #event-category {
+    #event-search, #event-category, #places-search, #places-category {
         width: 100%;
         margin-bottom: 10px;
     }
