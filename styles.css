@@ -141,6 +141,11 @@ menu[role="tablist"] a.active {
     font-size: 18px;
     color: #ff4081;
     text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.event:hover h2 {
+    color: #ffffff; /* Change to white on hover for better contrast */
 }
 
 .event-info,
