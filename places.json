@@ -1,12 +1,5 @@
 [
   {
-    "name": "Cineteca Nacional",
-    "type": "Movie Theater",
-    "neighborhood": "Coyoacán",
-    "address": "Av. México Coyoacán 389, Xoco, 03330",
-    "link": "https://www.cinetecanacional.net/"
-  },
-  {
     "name": "Foro Sol",
     "type": "Concert Venue",
     "neighborhood": "Iztacalco",
@@ -14,19 +7,39 @@
     "link": "https://www.ocesa.com.mx/venues/foro-sol/"
   },
   {
-    "name": "Museo Nacional de Antropología",
-    "type": "Museum",
-    "neighborhood": "Miguel Hidalgo",
-    "address": "Av. Paseo de la Reforma & Calzada Gandhi, Chapultepec Polanco, 11560",
-    "link": "https://www.mna.inah.gob.mx/"
+    "name": "Palacio de los Deportes",
+    "type": "Concert Venue",
+    "neighborhood": "Iztacalco",
+    "address": "Av. Río Churubusco y Añil s/n, Granjas México, 08400",
+    "link": "https://www.palaciodelosdeportes.com.mx/"
   },
   {
-    "name": "Estadio Azteca",
-    "type": "Sports Arena",
-    "neighborhood": "Coyoacán",
-    "address": "Calzada de Tlalpan 3465, Santa Úrsula Coapa, 04650",
-    "link": "https://www.estadioazteca.com.mx/",
-    "teams": ["Club América", "Cruz Azul"]
+    "name": "Auditorio Nacional",
+    "type": "Concert Venue",
+    "neighborhood": "Miguel Hidalgo",
+    "address": "Av. Paseo de la Reforma 50, Bosque de Chapultepec, 11580",
+    "link": "https://www.auditorio.com.mx/"
+  },
+  {
+    "name": "Teatro Metropólitan",
+    "type": "Concert Venue",
+    "neighborhood": "Cuauhtémoc",
+    "address": "Independencia 90, Centro Histórico, 06050",
+    "link": "https://www.teatrometropolitan.com/"
+  },
+  {
+    "name": "El Plaza Condesa",
+    "type": "Concert Venue",
+    "neighborhood": "Cuauhtémoc",
+    "address": "Juan Escutia 4, Condesa, 06140",
+    "link": "https://plazacondesa.com.mx/"
+  },
+  {
+    "name": "Teatro de la Ciudad Esperanza Iris",
+    "type": "Theater",
+    "neighborhood": "Cuauhtémoc",
+    "address": "Donceles 36, Centro Histórico, 06010",
+    "link": "https://teatrodelaciudadmexico.com/"
   },
   {
     "name": "Teatro de los Insurgentes",
@@ -36,10 +49,131 @@
     "link": "https://teatroinsurgentes.com/"
   },
   {
-    "name": "Centro Cultural de España en México",
-    "type": "Cultural Center",
+    "name": "Teatro Telcel",
+    "type": "Theater",
     "neighborhood": "Cuauhtémoc",
-    "address": "República de Guatemala 18, Centro Histórico, 06010",
-    "link": "https://ccemx.org/"
+    "address": "Lago Zurich 245, Ampliación Granada, 11529",
+    "link": "https://teatrotelcel.com/"
+  },
+  {
+    "name": "Teatro Helénico",
+    "type": "Theater",
+    "neighborhood": "Miguel Hidalgo",
+    "address": "Av. Revolución 1500, Guadalupe Inn, 01020",
+    "link": "https://helenico.gob.mx/"
+  },
+  {
+    "name": "Cineteca Nacional",
+    "type": "Movie Theater",
+    "neighborhood": "Coyoacán",
+    "address": "Av. México Coyoacán 389, Xoco, 03330",
+    "link": "https://www.cinetecanacional.net/"
+  },
+  {
+    "name": "Cinépolis Universidad",
+    "type": "Movie Theater",
+    "neighborhood": "Coyoacán",
+    "address": "Av. Universidad 1000, Santa Cruz Atoyac, 03310",
+    "link": "https://cinepolis.com/"
+  },
+  {
+    "name": "Cinemex Reforma 222",
+    "type": "Movie Theater",
+    "neighborhood": "Cuauhtémoc",
+    "address": "Paseo de la Reforma 222, Juárez, 06600",
+    "link": "https://cinemex.com/"
+  },
+  {
+    "name": "Museo Nacional de Antropología",
+    "type": "Museum",
+    "neighborhood": "Miguel Hidalgo",
+    "address": "Av. Paseo de la Reforma & Calzada Gandhi, Chapultepec Polanco, 11560",
+    "link": "https://www.mna.inah.gob.mx/"
+  },
+  {
+    "name": "Museo Soumaya",
+    "type": "Museum",
+    "neighborhood": "Miguel Hidalgo",
+    "address": "Blvd. Miguel de Cervantes Saavedra 303, Granada, 11529",
+    "link": "https://www.museosoumaya.org/"
+  },
+  {
+    "name": "Museo Frida Kahlo",
+    "type": "Museum",
+    "neighborhood": "Coyoacán",
+    "address": "Londres 247, Del Carmen, 04100",
+    "link": "https://www.museofridakahlo.org.mx/"
+  },
+  {
+    "name": "Museo Jumex",
+    "type": "Museum",
+    "neighborhood": "Miguel Hidalgo",
+    "address": "Miguel de Cervantes Saavedra 303, Granada, 11520",
+    "link": "https://www.fundacionjumex.org/"
+  },
+  {
+    "name": "Bosque de Chapultepec",
+    "type": "Park",
+    "neighborhood": "Miguel Hidalgo",
+    "address": "Paseo de la Reforma s/n, Bosque de Chapultepec, 11100",
+    "link": "https://www.sedema.cdmx.gob.mx/programas/programa/bosque-de-chapultepec"
+  },
+  {
+    "name": "Parque México",
+    "type": "Park",
+    "neighborhood": "Cuauhtémoc",
+    "address": "Av. México s/n, Hipódromo, 06100",
+    "link": "https://www.sedema.cdmx.gob.mx/programas/programa/parque-mexico"
+  },
+  {
+    "name": "Parque La Mexicana",
+    "type": "Park",
+    "neighborhood": "Cuajimalpa",
+    "address": "Av. Luis Barragán 505, Santa Fe, 05348",
+    "link": "https://www.parquelamexicana.mx/"
+  },
+  {
+    "name": "Viveros de Coyoacán",
+    "type": "Park",
+    "neighborhood": "Coyoacán",
+    "address": "Av. Progreso 1, Del Carmen, 04100",
+    "link": "https://www.gob.mx/conanp/acciones-y-programas/viveros-de-coyoacan"
+  },
+  {
+    "name": "Estadio Azteca",
+    "type": "Sports Venue",
+    "neighborhood": "Coyoacán",
+    "address": "Calzada de Tlalpan 3465, Santa Úrsula Coapa, 04650",
+    "link": "https://www.estadioazteca.com.mx/",
+    "teams": ["Club América", "Cruz Azul"]
+  },
+  {
+    "name": "Estadio Olímpico Universitario",
+    "type": "Sports Venue",
+    "neighborhood": "Coyoacán",
+    "address": "Av. Insurgentes Sur s/n, Ciudad Universitaria, 04510",
+    "link": "https://www.pumas.mx/",
+    "teams": ["Pumas UNAM"]
+  },
+  {
+    "name": "Autódromo Hermanos Rodríguez",
+    "type": "Sports Venue",
+    "neighborhood": "Iztacalco",
+    "address": "Av. Viaducto Río de la Piedad s/n, Granjas México, 08400",
+    "link": "https://www.autodromohermanosrodriguez.com/"
+  },
+  {
+    "name": "Arena Ciudad de México",
+    "type": "Sports Venue",
+    "neighborhood": "Azcapotzalco",
+    "address": "Av. de las Granjas 800, Santa Barbara, 02230",
+    "link": "https://www.arenaciudaddemexico.com/"
+  },
+  {
+    "name": "Frontón México",
+    "type": "Sports Venue",
+    "neighborhood": "Cuauhtémoc",
+    "address": "Plaza de la República 17, Tabacalera, 06030",
+    "link": "https://www.frontonmexico.com/"
   }
 ]
