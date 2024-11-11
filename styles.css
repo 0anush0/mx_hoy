@@ -77,6 +77,28 @@ h2 {
     font-family: 'VT323', monospace;
 }
 
+#event-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#event-search, #event-category {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #000;
+    color: #0f0;
+    border: 2px solid #0f0;
+}
+
+#event-search {
+    width: 60%;
+}
+
+#event-category {
+    width: 35%;
+}
+
 .event-grid, .place-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -93,6 +115,20 @@ h2 {
 .event:hover, .place-category:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+}
+
+.event-tags {
+    margin-top: 10px;
+}
+
+.event-tag {
+    display: inline-block;
+    background-color: #0f0;
+    color: #000;
+    padding: 2px 5px;
+    margin-right: 5px;
+    font-size: 0.8em;
+    border-radius: 3px;
 }
 
 h3 {
@@ -116,6 +152,7 @@ li {
     border: 2px solid #0f0;
     padding: 30px;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 #email-signup h2 {
@@ -152,10 +189,27 @@ li {
     background-color: #f0f;
 }
 
+/* Weather widget styles */
+#weather-widget {
+    background-color: #111;
+    border: 2px solid #0f0;
+    padding: 20px;
+    text-align: center;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .event-grid, .place-grid {
         grid-template-columns: 1fr;
+    }
+
+    #event-filters {
+        flex-direction: column;
+    }
+
+    #event-search, #event-category {
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     #email-form {

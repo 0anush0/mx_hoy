@@ -3,53 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CDMX Underground - Eventos y Cultura Urbana</title>
+    <title>CDMX Hoy - Tu Guía de Eventos en la Ciudad</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>CDMX Underground</h1>
-            <p class="tagline">Tu Guía de Eventos y Cultura Urbana</p>
+            <h1>CDMX Hoy</h1>
+            <p class="tagline">Tu Guía Completa de Eventos en la Ciudad</p>
         </header>
         <nav>
             <button class="nav-button active" data-tab="eventos">Eventos</button>
-            <button class="nav-button" data-tab="lugares">Spots</button>
+            <button class="nav-button" data-tab="lugares">Lugares</button>
         </nav>
         <main>
             <section id="eventos" class="tab-content active">
+                <div id="event-filters">
+                    <input type="text" id="event-search" placeholder="Buscar eventos...">
+                    <select id="event-category">
+                        <option value="">Todas las categorías</option>
+                        <!-- Categories will be populated by JavaScript -->
+                    </select>
+                </div>
                 <div id="event-list" class="event-grid"></div>
             </section>
             <section id="lugares" class="tab-content">
-                <h2>Spots Secretos</h2>
+                <h2>Lugares Destacados</h2>
                 <div class="place-grid">
-                    <div class="place-category">
-                        <h3>Skate Parks</h3>
-                        <ul id="skate-parks"></ul>
-                    </div>
-                    <div class="place-category">
-                        <h3>Galerías Underground</h3>
-                        <ul id="underground-galleries"></ul>
-                    </div>
-                    <div class="place-category">
-                        <h3>Cines de Culto</h3>
-                        <ul id="cult-cinemas"></ul>
-                    </div>
-                    <div class="place-category">
-                        <h3>Clubs Nocturnos</h3>
-                        <ul id="night-clubs"></ul>
-                    </div>
+                    <!-- Places will be populated by JavaScript -->
                 </div>
             </section>
         </main>
         <aside id="email-signup">
-            <h2>¡Únete a la Comunidad!</h2>
+            <h2>¡No Te Pierdas Nada!</h2>
             <form id="email-form">
                 <input type="email" id="email" required placeholder="Tu correo electrónico">
                 <button type="submit">Suscríbete</button>
             </form>
         </aside>
+        <div id="weather-widget">
+            <!-- Weather info will be populated by JavaScript -->
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

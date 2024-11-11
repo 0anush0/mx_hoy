@@ -1,32 +1,48 @@
 [
   {
-    "name": "Skate & Destroy: Competencia Nocturna",
+    "name": "Concierto de Rock en el Foro Sol",
     "date": "2024-11-15",
-    "location": "Skatepark Templo Mayor",
-    "description": "Competencia de skate con DJs en vivo y proyecciones de video arte."
+    "location": "Foro Sol",
+    "description": "Gran concierto de rock con bandas nacionales e internacionales.",
+    "tags": ["conciertos", "rock", "música"]
   },
   {
-    "name": "Underground Film Fest",
+    "name": "Festival de Cine Independiente",
     "date": "2024-11-20",
     "location": "Cineteca Nacional",
-    "description": "Maratón de cine independiente y experimental con directores locales."
+    "description": "Muestra de películas independientes de directores emergentes.",
+    "tags": ["cine", "festival", "cultura"]
   },
   {
-    "name": "Street Art Jam",
+    "name": "Obra de Teatro: 'La Casa de Bernarda Alba'",
     "date": "2024-11-25",
-    "location": "Foro Alicia",
-    "description": "Festival de arte urbano con live painting, música en vivo y food trucks."
+    "location": "Teatro de la Ciudad",
+    "description": "Representación de la famosa obra de Federico García Lorca.",
+    "tags": ["teatro", "cultura", "literatura"]
   },
   {
-    "name": "Techno Warehouse Party",
+    "name": "Partido de Fútbol: América vs. Pumas",
     "date": "2024-12-01",
-    "location": "Ubicación Secreta",
-    "description": "Fiesta clandestina de música electrónica en una bodega abandonada."
+    "location": "Estadio Azteca",
+    "description": "Clásico capitalino de la Liga MX.",
+    "tags": ["deportes", "fútbol"]
   },
   {
-    "name": "Zine Fest CDMX",
+    "name": "Exposición de Arte Contemporáneo",
     "date": "2024-12-10",
-    "location": "Border",
-    "description": "Feria de fanzines y publicaciones independientes con talleres y charlas."
-  }
-]
+    "location": "MUAC",
+    "description": "Muestra de artistas contemporáneos mexicanos e internacionales.",
+    "tags": ["exposiciones", "arte", "cultura"]
+  },
+  {
+    "name": "Charla: 'El Futuro de la Inteligencia Artificial'",
+    "date": "2024-12-15",
+    "location": "Teatro Metropólitan",
+    "description": "Conferencia sobre los avances y desafíos de la IA.",
+    "tags": ["charlas", "tecnología", "ciencia"]
+  },
+  {
+    "name": "Clase Magistral de Cocina Mexicana",
+    "date": "2024-12-20",
+    "location": "Escuela de Gastronomía",
+    "description

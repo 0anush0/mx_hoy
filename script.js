@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     loadEvents();
     loadPlaces();
+    loadCategories();
+    loadWeather();
 
     const navButtons = document.querySelectorAll('.nav-button');
     const tabContents = document.querySelectorAll('.tab-content');
@@ -22,6 +24,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = document.getElementById('email').value;
         submitEmail(email);
     });
+
+    document.getElementById('event-search').addEventListener('input', filterEvents);
+    document.getElementById('event-category').addEventListener('change', filterEvents);
 });
 
 async function loadEvents() {
@@ -44,6 +49,9 @@ function displayEvents(events) {
             <h3>${event.name}</h3>
             <p>${event.date} - ${event.location}</p>
             <p>${event.description}</p>
+            <div class="event-tags">
+                ${event.tags.map(tag => `<span class="event-tag">${tag}</span>`).join('')}
+            </div>
         `;
         eventList.appendChild(eventElement);
     });
@@ -51,23 +59,63 @@ function displayEvents(events) {
 
 function loadPlaces() {
     const places = {
-        'skate-parks': ['Skatepark Templo Mayor', 'La Mexicana Skatepark', 'Parque Bicentenario Skatepark', 'Skatepark Constituyentes', 'Skatepark Xochimilco'],
-        'underground-galleries': ['Border', 'Galería Libertad', 'Antimuseo', 'Biquini Wax EPS', 'Salón Silicón'],
-        'cult-cinemas': ['Cine Tonalá', 'La Casa del Cine', 'Cineteca Nacional', 'Cinemanía', 'Cine Villa Olímpica'],
-        'night-clubs': ['M.N. Roy', 'Yu Yu', 'Departamento', 'Foro Normandie', 'Patrick Miller']
+        'Venues': ['Foro Sol', 'Palacio de los Deportes', 'Auditorio Nacional', 'Teatro de la Ciudad'],
+        'Museos': ['Museo Nacional de Antropología', 'Museo Soumaya', 'MUAC', 'Museo Frida Kahlo'],
+        'Cines': ['Cineteca Nacional', 'Cine Tonalá', 'Cinépolis', 'Cinemex'],
+        'Teatros': ['Teatro Metropólitan', 'Teatro de los Insurgentes', 'Teatro Hidalgo', 'Foro Shakespeare']
     };
 
+    const placeGrid = document.querySelector('.place-grid');
     for (const [category, placeList] of Object.entries(places)) {
-        const ul = document.getElementById(category);
-        placeList.forEach(place => {
-            const li = document.createElement('li');
-            li.textContent = place;
-            ul.appendChild(li);
-        });
+        const categoryElement = document.createElement('div');
+        categoryElement.classList.add('place-category');
+        categoryElement.innerHTML = `
+            <h3>${category}</h3>
+            <ul>
+                ${placeList.map(place => `<li>${place}</li>`).join('')}
+            </ul>
+        `;
+        placeGrid.appendChild(categoryElement);
     }
+}
+
+function loadCategories() {
+    const categories = ['Conciertos', 'Cine', 'Teatro', 'Deportes', 'Exposiciones', 'Charlas', 'Clases', 'Tours'];
+    const categorySelect = document.getElementById('event-category');
+    categories.forEach(category => {
+        const option = document.createElement('option');
+        option.value = category.toLowerCase();
+        option.textContent = category;
+        categorySelect.appendChild(option);
+    });
+}
+
+function filterEvents() {
+    const searchTerm = document.getElementById('event-search').value.toLowerCase();
+    const category = document.getElementById('event-category').value.toLowerCase();
+    const events = document.querySelectorAll('.event');
+
+    events.forEach(event => {
+        const eventName = event.querySelector('h3').textContent.toLowerCase();
+        const eventTags = Array.from(event.querySelectorAll('.event-tag')).map(tag => tag.textContent.toLowerCase());
+        const matchesSearch = eventName.includes(searchTerm);
+        const matchesCategory = category === '' || eventTags.includes(category);
+
+        if (matchesSearch && matchesCategory) {
+            event.style.display = 'block';
+        } else {
+            event.style.display = 'none';
+        }
+    });
+}
+
+async function loadWeather() {
+    // This is a placeholder. In a real application, you would fetch weather data from an API
+    const weatherWidget = document.getElementById('weather-widget');
+    weatherWidget.innerHTML = '<h3>Clima en CDMX</h3><p>22°C, Parcialmente nublado</p>';
 }
 
 async function submitEmail(email) {
     console.log(`Email submitted: ${email}`);
-    alert('¡Bienvenido a la comunidad underground! Revisa tu correo para info exclusiva.');
+    alert('¡Gracias por suscribirte! Te mantendremos informado sobre los mejores eventos en CDMX.');
 }
