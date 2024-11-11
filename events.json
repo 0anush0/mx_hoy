@@ -1,48 +1,28 @@
-[
-  {
-    "name": "Concierto de Rock en el Foro Sol",
-    "date": "2024-11-15",
-    "location": "Foro Sol",
-    "description": "Gran concierto de rock con bandas nacionales e internacionales.",
-    "tags": ["conciertos", "rock", "música"]
-  },
-  {
-    "name": "Festival de Cine Independiente",
-    "date": "2024-11-20",
-    "location": "Cineteca Nacional",
-    "description": "Muestra de películas independientes de directores emergentes.",
-    "tags": ["cine", "festival", "cultura"]
-  },
-  {
-    "name": "Obra de Teatro: 'La Casa de Bernarda Alba'",
-    "date": "2024-11-25",
-    "location": "Teatro de la Ciudad",
-    "description": "Representación de la famosa obra de Federico García Lorca.",
-    "tags": ["teatro", "cultura", "literatura"]
-  },
-  {
-    "name": "Partido de Fútbol: América vs. Pumas",
-    "date": "2024-12-01",
-    "location": "Estadio Azteca",
-    "description": "Clásico capitalino de la Liga MX.",
-    "tags": ["deportes", "fútbol"]
-  },
-  {
-    "name": "Exposición de Arte Contemporáneo",
-    "date": "2024-12-10",
-    "location": "MUAC",
-    "description": "Muestra de artistas contemporáneos mexicanos e internacionales.",
-    "tags": ["exposiciones", "arte", "cultura"]
-  },
-  {
-    "name": "Charla: 'El Futuro de la Inteligencia Artificial'",
-    "date": "2024-12-15",
-    "location": "Teatro Metropólitan",
-    "description": "Conferencia sobre los avances y desafíos de la IA.",
-    "tags": ["charlas", "tecnología", "ciencia"]
-  },
-  {
-    "name": "Clase Magistral de Cocina Mexicana",
-    "date": "2024-12-20",
-    "location": "Escuela de Gastronomía",
-    "description
+{
+    "events": [
+        {
+            "name": "Concierto de Rock en el Foro Sol",
+            "date": "2024-11-15",
+            "location": "Foro Sol",
+            "description": "Gran concierto de rock con bandas nacionales e internacionales",
+            "category": "música",
+            "tags": ["rock", "música", "concierto"]
+        },
+        {
+            "name": "Festival de Teatro Independiente",
+            "date": "2024-11-20",
+            "location": "Teatro de la Ciudad",
+            "description": "Muestra de obras de teatro independiente",
+            "category": "teatro",
+            "tags": ["teatro", "cultura", "arte"]
+        },
+        {
+            "name": "Exposición de Arte Contemporáneo",
+            "date": "2024-11-25",
+            "location": "MUAC",
+            "description": "Exhibición de artistas emergentes",
+            "category": "arte",
+            "tags": ["arte", "exposición", "cultura"]
+        }
+    ]
+}

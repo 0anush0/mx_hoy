@@ -1,17 +1,25 @@
-[
-  {
-    "name": "Cineteca Nacional",
-    "type": "Movie Theater",
-    "neighborhood": "Coyoacán",
-    "address": "Av. México Coyoacán 389, Xoco, 03330",
-    "link": "https://www.cinetecanacional.net/"
-  },
-  {
-    "name": "Foro Sol",
-    "type": "Concert Venue",
-    "neighborhood": "Iztacalco",
-    "address": "Av. Viaducto Río de la Piedad, Granjas México, 08400",
-    "link": "https://www.ocesa.com.mx/venues/foro-sol/"
-  },
-  // ... (other places)
-]
+{
+    "places": [
+        {
+            "name": "Foro Sol",
+            "category": "música",
+            "location": "Av. Viaducto Río de la Piedad s/n",
+            "description": "Recinto para conciertos masivos",
+            "capacity": 65000
+        },
+        {
+            "name": "Teatro de la Ciudad",
+            "category": "teatro",
+            "location": "Donceles 36, Centro Histórico",
+            "description": "Teatro histórico con programación variada",
+            "capacity": 1200
+        },
+        {
+            "name": "MUAC",
+            "category": "museo",
+            "location": "Insurgentes Sur 3000, CU",
+            "description": "Museo Universitario Arte Contemporáneo",
+            "type": "arte contemporáneo"
+        }
+    ]
+}

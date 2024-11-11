@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     loadEvents();
     loadPlaces();
-    loadCategories();
-    loadWeather();
+    setupNavigation();
+    setupFilters();
+});
 
+function setupNavigation() {
     const navButtons = document.querySelectorAll('.nav-button');
     const tabContents = document.querySelectorAll('.tab-content');
 
@@ -16,26 +18,34 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById(tabName).classList.add('active');
         });
     });
+}
 
-    document.getElementById('email-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const email = document.getElementById('email').value;
-        submitEmail(email);
-    });
-
+function setupFilters() {
     document.getElementById('event-search').addEventListener('input', filterEvents);
     document.getElementById('event-category').addEventListener('change', filterEvents);
     document.getElementById('places-search').addEventListener('input', filterPlaces);
     document.getElementById('places-category').addEventListener('change', filterPlaces);
-});
+}
 
 async function loadEvents() {
     try {
         const response = await fetch('events.json');
         const events = await response.json();
         displayEvents(events);
+        populateEventCategories(events);
     } catch (error) {
         console.error('Error loading events:', error);
+    }
+}
+
+async function loadPlaces() {
+    try {
+        const response = await fetch('places.json');
+        const places = await response.json();
+        displayPlaces(places);
+        populatePlaceCategories(places);
+    } catch (error) {
+        console.error('Error loading places:', error);
     }
 }
 
@@ -47,7 +57,7 @@ function displayEvents(events) {
         const eventElement = document.createElement('div');
         eventElement.classList.add('event');
 
-        const icon = getCategoryIcon(event.tags[0]);
+        const icon = getCategoryIcon(event.category);
         eventElement.innerHTML = `
             <i class="${icon} category-icon"></i>
             <h3>${event.name}</h3>
@@ -62,25 +72,6 @@ function displayEvents(events) {
     });
 }
 
-function formatDate(dateStr) {
-    const date = new Date(dateStr);
-    return date.toLocaleDateString('es-MX', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
-}
-
-async function loadPlaces() {
-    try {
-        const response = await fetch('places.json');
-        const places = await response.json();
-        displayPlaces(places);
-    } catch (error) {
-        console.error('Error loading places:', error);
-    }
-}
-
 function displayPlaces(places) {
     const placesList = document.getElementById('places-list');
     placesList.innerHTML = '';
@@ -89,15 +80,13 @@ function displayPlaces(places) {
         const placeElement = document.createElement('div');
         placeElement.classList.add('place');
 
-        const icon = getCategoryIcon(place.type);
+        const icon = getCategoryIcon(place.category);
         placeElement.innerHTML = `
             <i class="${icon} category-icon"></i>
             <h3>${place.name}</h3>
-            <p>Tipo: ${place.type}</p>
-            <p>Colonia: ${place.neighborhood}</p>
-            <p>Dirección: ${place.address}</p>
-            ${place.website ? `<p>Sitio Web: ${place.website}</p>` : ''}
-            ${place.teams ? `<p>Equipos: ${place.teams.join(', ')}</p>` : ''}
+            <p class="place-category">${place.category}</p>
+            <p class="place-location">${place.location}</p>
+            <p class="place-description">${place.description}</p>
         `;
         placesList.appendChild(placeElement);
     });
@@ -105,68 +94,74 @@ function displayPlaces(places) {
 
 function getCategoryIcon(category) {
     const icons = {
-        'conciertos': 'fas fa-music',
-        'rock': 'fas fa-guitar',
-        'cine': 'fas fa-film',
-        'festival': 'fas fa-star',
+        'música': 'fas fa-music',
         'teatro': 'fas fa-theater-masks',
-        'deportes': 'fas fa-basketball-ball',
-        'fútbol': 'fas fa-futbol',
-        'exposiciones': 'fas fa-palette',
-        'arte': 'fas fa-paint-brush',
-        'charlas': 'fas fa-microphone',
-        'tecnología': 'fas fa-laptop-code',
-        'ciencia': 'fas fa-atom',
-        'gastronomía': 'fas fa-utensils',
-        'literatura': 'fas fa-book',
-        'Movie Theater': 'fas fa-film',
-        'Concert Venue': 'fas fa-music',
-        'Museum': 'fas fa-landmark',
-        'Sports Arena': 'fas fa-futbol',
-        'Theater': 'fas fa-theater-masks',
-        'Cultural Center': 'fas fa-palette',
-        'Park': 'fas fa-tree'
+        'cine': 'fas fa-film',
+        'deportes': 'fas fa-football-ball',
+        'arte': 'fas fa-palette',
+        'museo': 'fas fa-landmark',
+        'parque': 'fas fa-tree',
+        'restaurante': 'fas fa-utensils',
+        'bar': 'fas fa-glass-martini-alt',
+        'concierto': 'fas fa-guitar'
     };
-    return icons[category.toLowerCase()] || 'fas fa-calendar-alt';
+    return icons[category.toLowerCase()] || 'fas fa-star';
 }
 
-function loadCategories() {
-    const eventCategories = [
-        'Conciertos', 'Cine', 'Teatro', 'Deportes', 'Exposiciones',
-        'Charlas', 'Clases', 'Tours', 'Música', 'Festival', 'Cultura',
-        'Literatura', 'Fútbol', 'Arte', 'Tecnología', 'Ciencia',
-        'Gastronomía', 'Historia', 'Jazz', 'Entretenimiento', 'Béisbol',
-        'Música Electrónica', 'Parques', 'Naturaleza', 'Recreación',
-        'Comedia', 'Clubes', 'Fiesta'
-    ];
-
-    const placeCategories = [
-        'Movie Theater', 'Concert Venue', 'Museum', 'Sports Arena',
-        'Theater', 'Cultural Center', 'Park'
-    ];
-
-    populateCategories('event-category', eventCategories);
-    populateCategories('places-category', placeCategories);
+function formatDate(dateString) {
+    const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    };
+    return new Date(dateString).toLocaleDateString('es-MX', options);
 }
 
-function populateCategories(selectId, categories) {
-    const categorySelect = document.getElementById(selectId);
-    categorySelect.innerHTML = '<option value="">Todas las categorías</option>';
-
+function populateEventCategories(events) {
+    const categories = [...new Set(events.map(event => event.category))];
+    const select = document.getElementById('event-category');
+    select.innerHTML = '<option value="">Todas las categorías</option>';
     categories.forEach(category => {
-        const option = document.createElement('option');
-        option.value = category.toLowerCase();
-        option.textContent = category;
-        categorySelect.appendChild(option);
+        select.innerHTML += `<option value="${category}">${category}</option>`;
+    });
+}
+
+function populatePlaceCategories(places) {
+    const categories = [...new Set(places.map(place => place.category))];
+    const select = document.getElementById('places-category');
+    select.innerHTML = '<option value="">Todas las categorías</option>';
+    categories.forEach(category => {
+        select.innerHTML += `<option value="${category}">${category}</option>`;
     });
 }
 
 function filterEvents() {
     const searchTerm = document.getElementById('event-search').value.toLowerCase();
-    const category = document.getElementById('event-category').value.toLowerCase();
-    const events = document.querySelectorAll('.event');
+    const selectedCategory = document.getElementById('event-category').value.toLowerCase();
 
-    events.forEach(event => {
-        const eventName = event.querySelector('h3').textContent.toLowerCase();
-        const eventTags = Array.from(event.querySelectorAll('.event-tag'))
-            .map(tag => tag.textContent.
+    document.querySelectorAll('.event').forEach(event => {
+        const name = event.querySelector('h3').textContent.toLowerCase();
+        const category = event.querySelector('.event-tag').textContent.toLowerCase();
+
+        const matchesSearch = name.includes(searchTerm);
+        const matchesCategory = !selectedCategory || category === selectedCategory;
+
+        event.style.display = matchesSearch && matchesCategory ? 'block' : 'none';
+    });
+}
+
+function filterPlaces() {
+    const searchTerm = document.getElementById('places-search').value.toLowerCase();
+    const selectedCategory = document.getElementById('places-category').value.toLowerCase();
+
+    document.querySelectorAll('.place').forEach(place => {
+        const name = place.querySelector('h3').textContent.toLowerCase();
+        const category = place.querySelector('.place-category').textContent.toLowerCase();
+
+        const matchesSearch = name.includes(searchTerm);
+        const matchesCategory = !selectedCategory || category === selectedCategory;
+
+        place.style.display = matchesSearch && matchesCategory ? 'block' : 'none';
+    });
+}
