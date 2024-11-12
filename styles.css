@@ -86,7 +86,7 @@ select {
     gap: 20px;
 }
 
-.card {
+.place-card {
     background: white;
     border-radius: 12px;
     padding: 20px;
@@ -94,33 +94,33 @@ select {
     transition: transform 0.3s ease;
 }
 
-.card:hover {
+.place-card:hover {
     transform: translateY(-5px);
 }
 
-.card-icon {
+.category-icon {
     font-size: 2em;
     color: #0984e3;
     margin-bottom: 15px;
 }
 
-.card-title {
+h3 {
     font-size: 1.2em;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.card-date, .card-location {
+.area {
     color: #636e72;
     font-size: 0.9em;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 15px;
+    margin: 15px 0;
 }
 
 .tag {
@@ -129,6 +129,22 @@ select {
     padding: 4px 8px;
     border-radius: 4px;
     font-size: 0.8em;
+}
+
+.website-link, .location-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #0984e3;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.website-link:hover, .location-link:hover {
+    background-color: #0873c5;
 }
 
 @media (max-width: 768px) {
