@@ -33,12 +33,11 @@ function updateFilters(tabId) {
     categorySelect.innerHTML = '<option value="">Todas las categorías</option>';
     searchInput.value = '';
 
-    // Get unique categories from places
     if (tabId === 'places') {
         fetch('places.json')
             .then(response => response.json())
             .then(data => {
-                const categories = [...new Set(data.places.map(place => place.subcategories).flat())];
+                const categories = [...new Set(data.places.flatMap(place => place.subcategories))];
                 categories.sort().forEach(category => {
                     const option = document.createElement('option');
                     option.value = category.toLowerCase();
@@ -69,8 +68,8 @@ function renderPlaces(places) {
             <div class="tags">
                 ${place.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
             </div>
-            <a href="${place.website}" target="_blank" class="website-link">Visitar sitio web</a>
-            <a href="${place.location}" target="_blank" class="location-link">Ver en mapa</a>
+            <a href="${place.website}" target="_blank" class="website-link">Sitio web</a>
+            <a href="${place.location}" target="_blank" class="location-link">Ver mapa</a>
         </div>
     `).join('');
 }
